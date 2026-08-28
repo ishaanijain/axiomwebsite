@@ -1,0 +1,3767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXIOM | Elite Research Placement</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232b425b'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-size='60' font-weight='bold' fill='white'>A</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+
+ body {
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ color: #2b425b;
+ background: #f4f3ef; /* Warm off-white matching glass overlay */
+ line-height: 1.7;
+ font-size: 16px;
+ overflow-x: hidden;
+ }
+
+ .container { max-width: 1320px; margin: 0 auto; padding: 0 50px; }
+ @media (max-width: 768px) { .container { padding: 0 30px; } }
+
+ /* HEADER */
+ header {
+ background: transparent;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ border-bottom: none;
+ }
+
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px 0;
+ }
+
+ .logo {
+ font-size: 32px;
+ font-weight: 700;
+ letter-spacing: 0.15em;
+ color: #2b425b;
+ text-decoration: none;
+ font-family: 'Cormorant Garamond', serif;
+ }
+
+ nav {
+ display: flex;
+ gap: 40px;
+ }
+
+ nav a {
+ font-size: 14px;
+ color: #2b425b;
+ text-decoration: none;
+ font-weight: 600;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ transition: opacity 0.3s ease;
+ }
+
+ nav a:hover {
+ opacity: 0.6;
+ }
+
+ .header-right {
+ display: flex;
+ align-items: center;
+ }
+
+ .btn-header {
+ background: transparent;
+ color: #2b425b;
+ padding: 0;
+ border: none;
+ font-size: 14px;
+ font-weight: 700;
+ cursor: pointer;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ border-bottom: 1px solid #5a8fc4;
+ }
+
+ .btn-header:hover {
+ opacity: 0.6;
+ }
+
+ /* HERO */
+ .hero {
+ padding: 20px 0 60px;
+ background: #f4f3ef;
+ position: relative;
+ border-bottom: 4px solid transparent;
+ border-image: linear-gradient(90deg, #1e3a5f 0%, #5a8fc4 40%, #3d5a80 70%, #1e3a5f 100%) 1;
+ overflow: hidden;
+ }
+
+ /* Colorful orbs floating in hero background */
+ .hero::after {
+ content: '';
+ position: absolute;
+ width: 600px;
+ height: 600px;
+ right: -100px;
+ top: -100px;
+ background: radial-gradient(circle, rgba(61,90,128,0.1) 0%, rgba(90,143,196,0.06) 40%, transparent 70%);
+ border-radius: 50%;
+ pointer-events: none;
+ z-index: 0;
+ }
+
+ .hero-content {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ text-align: left;
+ max-width: 800px;
+ position: relative;
+ z-index: 2;
+ }
+
+ .hero h1 {
+ font-size: 85px;
+ font-weight: 700;
+ line-height: 1.05;
+ margin-bottom: 24px;
+ background: linear-gradient(135deg, #0d1f35 0%, #2b425b 50%, #5a8fc4 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ letter-spacing: -2px;
+ }
+
+ .hero p {
+ font-size: 24px;
+ color: #4a5a6a;
+ margin-bottom: 40px;
+ line-height: 1.6;
+ font-weight: 400;
+ }
+
+ .hero-buttons {
+ display: flex; justify-content: center;
+ }
+
+ .btn-primary {
+ background: #2b425b;
+ color: #ffffff;
+ padding: 18px 40px;
+ border: none;
+ font-size: 12px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+ .btn-primary:hover {
+ background: #5a8fc4;
+ }
+
+ /* SERVICES */
+ .services {
+ padding: 50px 0;
+ background: transparent;
+ border-top: 1px solid rgba(17, 17, 17, 0.1);
+ }
+ .services-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 52px;
+ margin-top: 40px;
+ }
+ @media (max-width: 900px) {
+ .services-grid { grid-template-columns: 1fr; }
+ }
+
+ .pricing-price {
+ font-size: 16px;
+ font-weight: 700;
+ color: #2b425b;
+ margin-bottom: 8px;
+ font-family: 'Courier New', Courier, monospace;
+ letter-spacing: -0.5px;
+ }
+ .pricing-duration {
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #2b425b;
+ font-weight: 700;
+ margin-bottom: 24px;
+ font-family: 'Courier New', Courier, monospace;
+ }
+ .pricing-vibe {
+ font-size: 15px;
+ color: #5a6d7a;
+ line-height: 1.6;
+ margin-bottom: 32px;
+ min-height: 72px;
+ }
+ .pricing-list {
+ text-align: left;
+ list-style: none;
+ margin-bottom: 40px;
+ flex-grow: 1;
+ }
+ .pricing-list li {
+ position: relative;
+ padding-left: 20px;
+ margin-bottom: 22px;
+ font-size: 18px;
+ color: #2b425b;
+ }
+ .pricing-list li::before {
+ content: '-';
+ position: absolute;
+ left: 0;
+ color: #2b425b;
+ }
+ .service-card {
+ display: flex;
+ flex-direction: column;
+ text-align: left;
+ background: #f8fbff;
+ border: 2px solid #e2b740; /* Rich Gold */
+ outline: 2px solid #e2b740;
+ outline-offset: -10px;
+ border-radius: 12px;
+ padding: 50px 45px;
+ box-shadow: inset 0 0 0 16px #f8fbff, inset 0 0 0 17px rgba(226, 183, 64, 0.6), 0 20px 40px rgba(9, 21, 43, 0.08);
+ position: relative;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ /* Corner motifs for individual service cards */
+ .service-card::before, .service-card::after {
+ content: '◆';
+ position: absolute;
+ font-size: 18px;
+ color: #e2b740;
+ line-height: 1;
+ z-index: 2;
+ }
+ .service-card::before { top: -8px; left: -8px; background: #f8fbff; padding: 2px; }
+ .service-card::after { bottom: -8px; right: -8px; background: #f8fbff; padding: 2px; }
+
+ .service-card:hover {
+ transform: translateY(-8px);
+ box-shadow: inset 0 0 0 16px #f8fbff, inset 0 0 0 17px rgba(226, 183, 64, 0.9), 0 30px 60px rgba(9, 21, 43, 0.15);
+ }
+
+ .service-card h3 {
+ margin-bottom: 24px; 
+ font-size: 32px;
+ font-family: 'Cormorant Garamond', serif;
+ }
+ .popular-badge {
+ position: absolute;
+ top: -14px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: #e2b740;
+ color: #09152b;
+ padding: 4px 16px;
+ font-size: 11px;
+ font-weight: 800;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ border-radius: 4px;
+ z-index: 3;
+ box-shadow: 0 4px 10px rgba(226, 183, 64, 0.3);
+ }
+
+ /* FRAMEWORK */
+ .framework {
+ padding: 50px 0;
+ background: transparent;
+ }
+ .framework-grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 70px;
+ margin-top: 60px;
+ align-items: center;
+ }
+ .step-card {
+ text-align: center;
+ background: #f8fbff; /* Match site background */
+ /* Ornate Indian-Style Triple Border Effect */
+ border: 2px solid #09152b; /* Dark Sapphire */
+ outline: 2px solid #09152b;
+ outline-offset: -10px;
+ border-radius: 12px;
+ width: 255px;
+ height: 350px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 35px;
+ margin: 0 auto;
+ /* The innermost decorative line */
+ box-shadow: inset 0 0 0 16px #f8fbff, inset 0 0 0 17px rgba(9, 21, 43, 0.6), 0 20px 40px rgba(9, 21, 43, 0.08);
+ transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+ position: relative;
+ }
+ 
+ /* Ornate corner floral/diamond hints */
+ .step-card::before, .step-card::after {
+ content: '◆';
+ position: absolute;
+ font-size: 18px;
+ color: #09152b;
+ line-height: 1;
+ }
+ .step-card::before { top: -8px; left: -8px; background: #f8fbff; padding: 2px; }
+ .step-card::after { bottom: -8px; right: -8px; background: #f8fbff; padding: 2px; }
+
+ .step-card:hover {
+ transform: translateY(-12px) scale(1.02);
+ box-shadow: inset 0 0 0 16px #f8fbff, inset 0 0 0 17px rgba(9, 21, 43, 0.9), 0 30px 60px rgba(9, 21, 43, 0.15);
+ }
+ 
+ .step-card:not(:last-child)::after {
+ content: '→'; /* Ornate arrow */
+ position: absolute;
+ right: -45px;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 48px;
+ color: #09152b;
+ font-family: 'Cormorant Garamond', serif;
+ text-shadow: 0 4px 10px rgba(9, 21, 43, 0.1);
+ pointer-events: none;
+ background: transparent;
+ padding: 0;
+ }
+ .step-num {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 46px;
+ font-weight: 700;
+ color: #09152b;
+ margin-bottom: 15px;
+ line-height: 1;
+ font-style: italic;
+ }
+ .step-card h3 {
+ font-size: 28px;
+ color: #09152b;
+ margin-bottom: 12px;
+ font-family: 'Cormorant Garamond', serif;
+ letter-spacing: 1px;
+ }
+ .step-card p {
+ font-size: 15px;
+ color: #4a5a6a;
+ line-height: 1.6;
+ }
+ 
+ @media (max-width: 1200px) {
+ .step-card { width: 230px; height: 280px; padding: 25px; border-radius: 30px; }
+ .step-card h3 {
+ font-size: 24px;
+ }
+ }
+ @media (max-width: 900px) {
+ .framework-grid { grid-template-columns: 1fr; gap: 60px; justify-items: center; }
+ .step-card:not(:last-child)::after {
+ content: '↓';
+ right: 50%;
+ bottom: -40px;
+ top: auto;
+ transform: translateX(50%);
+ }
+ }
+
+ /* ROADMAPS */
+ .roadmaps {
+ padding: 50px 0;
+ background: #f8fbff; /* Bone/Warm Off-White */
+ }
+ .roadmap-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 40px;
+ }
+ .roadmap-card {
+ background: transparent;
+ border: 1px solid rgba(122, 168, 217, 0.2);
+ border-radius: 0;
+ padding: 40px;
+ transition: transform 0.3s ease;
+ }
+ .roadmap-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+ }
+ .roadmap-grade {
+ font-size: 18px;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ color: #2b425b;
+ font-weight: 700;
+ margin-bottom: 16px;
+ }
+ .roadmap-card h3 {
+ font-size: 28px;
+ color: #2b425b;
+ margin-bottom: 20px;
+ font-family: 'Cormorant Garamond', serif;
+ }
+ .roadmap-card ul {
+ list-style: none;
+ margin-top: 20px;
+ }
+ .roadmap-card ul li {
+ position: relative;
+ padding-left: 24px;
+ margin-bottom: 12px;
+ font-size: 15px;
+ color: #5a6d7a;
+ }
+ .roadmap-card ul li::before {
+ content: '✓';
+ position: absolute;
+ left: 0;
+ color: #2b425b;
+ font-weight: bold;
+ }
+
+ /* EXPERTS */
+ .experts {
+ padding: 50px 0;
+ background: transparent;
+ }
+ .experts-container {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: flex;
+ gap: 60px;
+ align-items: center;
+ }
+ @media (max-width: 900px) {
+ .experts-container { flex-direction: column; text-align: left; }
+ }
+ .expert-img {
+ width: 240px;
+ height: 240px;
+ background: url('founder.jpg') center/cover;
+ flex-shrink: 0;
+ filter: contrast(1.08) saturate(1.1) brightness(1.02);
+ box-shadow: 0 15px 35px rgba(9, 21, 43, 0.15);
+ border-radius: 50%;
+ border: 4px solid #f8fbff;
+ position: relative;
+ }
+ .expert-img::after {
+ content: '';
+ position: absolute;
+ inset: -10px;
+ border-radius: 50%;
+ border: 1px solid rgba(122, 168, 217, 0.5);
+ }
+ .expert-card {
+ flex-grow: 1;
+ }
+ .expert-card h3 {
+ font-size: 72px;
+ color: #2b425b;
+ margin-bottom: 8px;
+ font-family: 'Cormorant Garamond', serif;
+ line-height: 1;
+ letter-spacing: -2px;
+ }
+ .expert-creds {
+ font-size: 18px;
+ color: #2b425b;
+ font-weight: 700;
+ margin-bottom: 32px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+ .expert-card p {
+ font-size: 18px;
+ color: #5a6d7a;
+ line-height: 1.8;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ font-weight: 300;
+ }
+
+ /* CASE STUDIES */
+ .case-studies {
+ padding: 50px 0;
+ background: #f8fbff; /* Bone/Warm Off-White */
+ }
+ .case-study-card {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ background: transparent;
+ border-radius: 16px;
+ overflow: hidden;
+ border: 1px solid rgba(122, 168, 217, 0.2);
+ margin-bottom: 40px;
+ }
+ @media (max-width: 900px) {
+ .case-study-card { grid-template-columns: 1fr; }
+ }
+ .cs-content {
+ padding: 50px;
+ }
+ .cs-highlight {
+ background: transparent; border: 1px solid rgba(122, 168, 217, 0.4);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding: 50px;
+ position: relative;
+ }
+ .cs-image {
+ width: 160px;
+ height: 160px;
+ border-radius: 50%;
+ margin-bottom: 24px;
+ box-shadow: 0 12px 24px rgba(43, 66, 91, 0.15);
+ background-color: #b8d8f0;
+ background-size: cover;
+ background-position: center;
+ }
+ .cs-title {
+ font-size: 42px;
+ color: #2b425b;
+ font-family: 'Cormorant Garamond', serif;
+ margin-bottom: 24px;
+ line-height: 1.2;
+ }
+ .cs-label {
+ font-weight: 700;
+ color: #2b425b;
+ font-size: 16px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 8px;
+ }
+ .cs-text {
+ font-size: 20px;
+ line-height: 1.6;
+ color: #5a6d7a;
+ margin-bottom: 24px;
+ }
+
+ /* LEAD MAGNET */
+ .lead-magnet {
+ padding: 50px 0;
+ background: #2b425b;
+ color: white;
+ text-align: center;
+ }
+ .lm-content {
+ max-width: 700px;
+ margin: 0 auto;
+ }
+ .lm-title {
+ font-size: 40px;
+ font-family: 'Cormorant Garamond', serif;
+ margin-bottom: 20px;
+ }
+ .lm-form {
+ display: flex;
+ gap: 16px;
+ margin-top: 40px;
+ justify-content: center;
+ }
+ @media (max-width: 600px) {
+ .lm-form { flex-direction: column; }
+ .lm-form input { width: 100%; }
+ }
+ .lm-form input {
+ padding: 16px 24px;
+ border-radius: 50px;
+ border: none;
+ width: 300px;
+ font-size: 16px;
+ }
+ .lm-btn {
+ background: #7aa8d9;
+ color: white;
+ padding: 16px 36px;
+ border: none;
+ border-radius: 50px;
+ font-size: 16px;
+ font-weight: 600;
+ cursor: pointer;
+ }
+
+
+ .moving-glass-bg {
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ background: linear-gradient(120deg, #d9e8fb, #f0f5ff, #e6f0fa, #c5d8f0);
+ background-size: 300% 300%;
+ animation: glassMove 15s ease infinite;
+ z-index: 1;
+ }
+ @keyframes glassMove {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+ }
+ .services {
+ position: relative;
+ overflow: hidden;
+ }
+ .services-grid {
+ position: relative;
+ z-index: 2;
+ }
+ .service-card {
+ background: rgba(255, 255, 255, 0.65) !important;
+ backdrop-filter: blur(12px);
+ border: 1px solid rgba(255, 255, 255, 0.5);
+ }
+
+
+ .pricing-price {
+ font-size: 48px;
+ font-weight: 700;
+ color: #2b425b;
+ margin-bottom: 8px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ }
+ .pricing-duration {
+ font-size: 18px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ color: #2b425b;
+ font-weight: 700;
+ margin-bottom: 24px;
+ }
+ .pricing-vibe {
+ font-size: 15px;
+ color: #5a6d7a;
+ line-height: 1.6;
+ margin-bottom: 32px;
+ min-height: 72px;
+ }
+ .pricing-list {
+ text-align: left;
+ list-style: none;
+ margin-bottom: 40px;
+ flex-grow: 1;
+ }
+ .pricing-list li {
+ position: relative;
+ padding-left: 28px;
+ margin-bottom: 22px;
+ font-size: 17px;
+    line-height: 1.5;
+ color: #2b425b;
+ }
+ .pricing-list li::before {
+ content: '✓';
+ position: absolute;
+ left: 0;
+ color: #2b425b;
+ font-weight: bold;
+ font-size: 18px;
+ }
+ .service-card {
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ }
+ 
+ .popular-badge {
+ position: absolute;
+ top: -16px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: #2b425b;
+ color: white;
+ padding: 6px 20px;
+ border-radius: 50px;
+ font-size: 12px;
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ white-space: nowrap;
+ }
+ @media (max-width: 1024px) {
+ 
+ }
+
+
+ .premium-glass-bg {
+ position: fixed;
+ top: -50%; left: -50%; width: 200%; height: 200%;
+ background: 
+ radial-gradient(circle at 20% 30%, rgba(200, 195, 185, 0.6) 0%, transparent 40%),
+ radial-gradient(circle at 80% 70%, rgba(180, 175, 165, 0.6) 0%, transparent 40%),
+ radial-gradient(circle at 50% 50%, rgba(220, 215, 205, 0.4) 0%, transparent 60%);
+ background-color: #ffffff;
+ animation: rotatePremium 40s linear infinite;
+ z-index: -2;
+ pointer-events: none;
+ }
+ 
+ @keyframes rotatePremium {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+ }
+
+ /* Frosted Glass Overlay for Sections */
+ .hero, .services, .framework, .experts, .case-studies, .testimonials {
+ background: rgba(244, 243, 239, 0.4) !important;
+ backdrop-filter: blur(24px);
+ -webkit-backdrop-filter: blur(24px);
+ border-bottom: 1px solid rgba(17, 17, 17, 0.05);
+ }
+ 
+ header {
+ background: rgba(244, 243, 239, 0.4) !important;
+ backdrop-filter: blur(24px);
+ -webkit-backdrop-filter: blur(24px);
+ }
+
+
+ /* TABLE CSS UPDATE */
+ .table-wrapper {
+ overflow-x: auto;
+ background: #0a192f;
+ border-radius: 16px;
+ border: 2px solid rgba(220, 185, 115, 0.4);
+ box-shadow: 0 20px 50px rgba(9, 21, 43, 0.4), inset 0 0 20px rgba(220, 185, 115, 0.05);
+ margin: 40px 0;
+ }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 18px;
+ color: #f8fbff;
+ }
+ th, td {
+ padding: 24px;
+ text-align: left;
+ border-bottom: 1px solid rgba(220, 185, 115, 0.2);
+ }
+ th:last-child, td:last-child {
+ border-right: none;
+ }
+ th {
+ background: rgba(14, 30, 56, 0.95);
+ color: #dcb973;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 16px;
+ border-bottom: 2px solid rgba(220, 185, 115, 0.5);
+ }
+ td {
+ color: #f8fbff;
+ font-weight: 500;
+ }
+ tr:last-child td {
+ border-bottom: none;
+ }
+ tr:hover td {
+ background: rgba(220, 185, 115, 0.05);
+ }
+ .badge {
+ padding: 8px 18px;
+ border-radius: 50px;
+ font-size: 18px;
+ font-weight: 700;
+ background: linear-gradient(135deg, #dcb973 0%, #b89047 100%);
+ color: #09152b;
+ display: inline-block;
+ box-shadow: 0 4px 10px rgba(220, 185, 115, 0.3);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+
+
+ .social-proof-section {
+ padding: 10px 0 50px;
+ }
+ .quotes-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 60px;
+ margin-top: 80px;
+ }
+ @media (max-width: 1024px) { .quotes-grid { grid-template-columns: 1fr; } }
+ .quote-card {
+ position: relative;
+ padding: 60px 40px 40px 40px;
+ background: #ffffff;
+ border: 1px solid rgba(122, 168, 217, 0.3);
+ border-radius: 12px;
+ box-shadow: 0 15px 35px rgba(43, 66, 91, 0.05);
+ transition: transform 0.3s ease;
+ }
+ .quote-card:hover {
+ transform: translateY(-5px);
+ }
+ .quote-card::before {
+ content: '"';
+ font-size: 140px;
+ color: rgba(122, 168, 217, 0.15);
+ position: absolute;
+ top: -10px;
+ left: 20px;
+ font-family: 'Cormorant Garamond', serif;
+ line-height: 1;
+ }
+
+
+ /* STATS BLOCKS */
+ .stats {
+ padding: 30px 0;
+ text-align: center;
+ }
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 40px;
+ max-width: 1000px;
+ margin: 0 auto;
+ }
+ @media (max-width: 768px) {
+ .stats-grid { grid-template-columns: 1fr; }
+ }
+ .stat-item {
+ background: rgba(255, 255, 255, 0.7);
+ border: 2px solid #5a8fc4;
+ padding: 16px 20px;
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(43, 66, 91, 0.08);
+ transition: transform 0.3s ease;
+ backdrop-filter: blur(10px);
+ }
+ .stat-item:hover {
+ transform: translateY(-4px);
+ }
+ .stat-number {
+ font-size: 28px;
+ font-weight: 700;
+ color: #2b425b;
+ margin-bottom: 4px;
+ font-family: 'Cormorant Garamond', serif;
+ line-height: 1;
+ letter-spacing: -1px;
+ }
+ .stat-label {
+ font-size: 11px;
+ color: #5a8fc4;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ }
+
+
+ /* MARQUEE LOGOS */
+ .logos { padding: 20px 0 0; overflow: hidden; position: relative; border-bottom: none !important; }
+ .marquee-container {
+ width: 100vw;
+ position: relative;
+ left: 50%;
+ transform: translateX(-50%);
+ overflow: hidden;
+ padding: 20px 0;
+ }
+ .marquee-track {
+ display: flex;
+ align-items: center;
+ gap: 40px;
+ width: max-content;
+ animation: marqueeTrain 120s linear infinite;
+ }
+ @keyframes marqueeTrain {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(-12.5%); }
+ }
+ .logo-box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 125px;
+ height: 60px;
+ border-radius: 12px;
+ font-size: 16px;
+ font-weight: 700;
+ color: white;
+ letter-spacing: 2px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.15);
+ flex-shrink: 0;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ }
+ .logo-box.mit { background: #A31F34; }
+ .logo-box.stanford { background: #8C1515; }
+ .logo-box.cmu { background: #C41230; }
+ .logo-box.princeton { background: #E77500; }
+ .logo-box.berkeley { background: #003262; }
+ .logo-box.upenn { background: #011F5B; }
+ .logo-box.jhu { background: #002D72; }
+ .logo-box.stjude { background: #CC0000; }
+ .logo-box.oregon { background: #154733; }
+
+
+ /* HERO 3D GLASS BG */
+ .hero {
+ position: relative;
+ overflow: hidden;
+ border-bottom: 3px solid rgba(43, 66, 91, 0.1);
+ box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.02);
+ }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ }
+ 
+ /* MARQUEE LOGOS */
+ .logos { padding: 20px 0 0; overflow: hidden; }
+ .marquee-container {
+ width: 100vw;
+ position: relative;
+ left: 50%;
+ transform: translateX(-50%);
+ overflow: hidden;
+ padding: 20px 0;
+ }
+ .marquee-track {
+ display: flex;
+ align-items: center;
+ gap: 40px;
+ width: max-content;
+ animation: marqueeTrain 120s linear infinite;
+ }
+ @keyframes marqueeTrain {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(calc(-50% - 20px)); }
+ }
+ .logo-box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 125px;
+ height: 60px;
+ border-radius: 12px;
+ font-size: 16px;
+ font-weight: 700;
+ color: white;
+ letter-spacing: 2px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.15);
+ flex-shrink: 0;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ }
+ .logo-box.mit { background: #A31F34; }
+ .logo-box.stanford { background: #8C1515; }
+ .logo-box.cmu { background: #C41230; }
+ .logo-box.princeton { background: #E77500; }
+ .logo-box.berkeley { background: #003262; }
+ .logo-box.upenn { background: #011F5B; }
+
+
+ /* HERO 3D GLASS BG */
+ .hero {
+ position: relative;
+ overflow: hidden;
+ border-bottom: 3px solid rgba(43, 66, 91, 0.1);
+ box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.02);
+ }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ }
+ .hero-3d-bg {
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ z-index: 0;
+ pointer-events: none;
+ overflow: hidden;
+ }
+ .shard {
+ position: absolute;
+ top: 50%; left: 50%;
+ width: 600px; height: 600px;
+ margin-top: -300px; margin-left: -300px;
+ background-image: url('shard.png');
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ mix-blend-mode: screen;
+ opacity: 0.7;
+ filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+ }
+ 
+ /* Initial clustered state moving to dispersed */
+ .shard-1 {
+ animation: drift1 40s infinite alternate ease-in-out;
+ }
+ .shard-2 {
+ animation: drift2 45s infinite alternate ease-in-out;
+ filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)) hue-rotate(15deg);
+ }
+ .shard-3 {
+ animation: drift3 50s infinite alternate ease-in-out;
+ width: 800px; height: 800px;
+ margin-top: -400px; margin-left: -400px;
+ opacity: 0.5;
+ }
+ .shard-4 {
+ animation: drift4 35s infinite alternate ease-in-out;
+ width: 400px; height: 400px;
+ margin-top: -200px; margin-left: -200px;
+ }
+ .shard-5 {
+ animation: drift5 48s infinite alternate ease-in-out;
+ filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)) hue-rotate(-15deg);
+ }
+
+ @keyframes drift1 {
+ 0% { transform: translate(0, 0) scale(0.8) rotate(0deg); }
+ 100% { transform: translate(-350px, -200px) scale(1.2) rotate(-45deg); }
+ }
+ @keyframes drift2 {
+ 0% { transform: translate(0, 0) scale(0.9) rotate(30deg); }
+ 100% { transform: translate(400px, -150px) scale(1.3) rotate(90deg); }
+ }
+ @keyframes drift3 {
+ 0% { transform: translate(0, 0) scale(0.7) rotate(-20deg); }
+ 100% { transform: translate(-200px, 300px) scale(1.4) rotate(-80deg); }
+ }
+ @keyframes drift4 {
+ 0% { transform: translate(0, 0) scale(0.9) rotate(50deg); }
+ 100% { transform: translate(450px, 250px) scale(1.1) rotate(120deg); }
+ }
+ @keyframes drift5 {
+ 0% { transform: translate(0, 0) scale(1) rotate(-60deg); }
+ 100% { transform: translate(-400px, 100px) scale(1.5) rotate(-10deg); }
+ }
+ /* MARQUEE LOGOS */
+ .logos { padding: 20px 0 0; overflow: hidden; }
+ .marquee-container {
+ width: 100vw;
+ position: relative;
+ left: 50%;
+ transform: translateX(-50%);
+ overflow: hidden;
+ padding: 20px 0;
+ }
+ .marquee-track {
+ display: flex;
+ align-items: center;
+ gap: 40px;
+ width: max-content;
+ animation: marqueeTrain 120s linear infinite;
+ }
+ @keyframes marqueeTrain {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(calc(-50% - 20px)); }
+ }
+ .logo-box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 125px;
+ height: 60px;
+ border-radius: 12px;
+ font-size: 16px;
+ font-weight: 700;
+ color: white;
+ letter-spacing: 2px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.15);
+ flex-shrink: 0;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ }
+ .logo-box.mit { background: #A31F34; }
+ .logo-box.stanford { background: #8C1515; }
+ .logo-box.cmu { background: #C41230; }
+ .logo-box.princeton { background: #E77500; }
+ .logo-box.berkeley { background: #003262; }
+ .logo-box.upenn { background: #011F5B; }
+
+
+ /* HERO 3D GLASS BG */
+ .hero {
+ position: relative;
+ overflow: hidden;
+ border-bottom: 3px solid rgba(43, 66, 91, 0.1);
+ box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.02);
+ }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ }
+ .hero-3d-bg {
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ z-index: 0;
+ pointer-events: none;
+ overflow: hidden;
+ background-image: url('hero_bg.png');
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ opacity: 0.7;
+ animation: slowKenBurns 40s infinite alternate ease-in-out;
+ }
+ @keyframes slowKenBurns {
+ 0% { transform: scale(1) translate(0, 0); }
+ 100% { transform: scale(1.15) translate(-2%, 2%); }
+ }
+ /* MARQUEE LOGOS */
+ .logos { padding: 20px 0 0; overflow: hidden; }
+ .marquee-container {
+ width: 100vw;
+ position: relative;
+ left: 50%;
+ transform: translateX(-50%);
+ overflow: hidden;
+ padding: 20px 0;
+ }
+ .marquee-track {
+ display: flex;
+ align-items: center;
+ gap: 40px;
+ width: max-content;
+ animation: marqueeTrain 120s linear infinite;
+ }
+ @keyframes marqueeTrain {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(calc(-50% - 20px)); }
+ }
+ .logo-box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 125px;
+ height: 60px;
+ border-radius: 12px;
+ font-size: 16px;
+ font-weight: 700;
+ color: white;
+ letter-spacing: 2px;
+ font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+ box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.15);
+ flex-shrink: 0;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ }
+ .logo-box.mit { background: #A31F34; }
+ .logo-box.stanford { background: #8C1515; }
+ .logo-box.cmu { background: #C41230; }
+ .logo-box.princeton { background: #E77500; }
+ .logo-box.berkeley { background: #003262; }
+ .logo-box.upenn { background: #011F5B; }
+
+
+ /* HERO 3D GLASS BG */
+ .hero {
+ position: relative;
+ overflow: hidden;
+ border-bottom: 3px solid rgba(43, 66, 91, 0.1);
+ box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.02);
+ }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ }
+ .hero-3d-bg {
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ perspective: 1200px;
+ z-index: 0;
+ pointer-events: none;
+ overflow: hidden;
+ }
+ .glass-pane {
+ position: absolute;
+ top: 50%; left: 50%;
+ transform-style: preserve-3d;
+ background: linear-gradient(135deg, rgba(122, 168, 217, 0.2), rgba(43, 66, 91, 0.6));
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ box-shadow: inset 0 0 30px rgba(255,255,255,0.2), 0 20px 50px rgba(0,0,0,0.2);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ }
+ 
+ /* Abstract Leaves */
+ .pane-1 {
+ width: 400px; height: 900px;
+ border-radius: 100% 0 100% 0; /* Distinct Leaf shape */
+ margin-top: -450px; margin-left: -200px;
+ animation: floatPane1 30s infinite ease-in-out alternate;
+ }
+ .pane-2 {
+ width: 800px; height: 350px;
+ border-radius: 0 100% 0 100%; /* Distinct Leaf shape */
+ margin-top: -200px; margin-left: -400px;
+ animation: floatPane2 35s infinite ease-in-out alternate;
+ background: linear-gradient(135deg, rgba(90, 143, 196, 0.3), rgba(27, 43, 61, 0.8));
+ }
+ .pane-3 {
+ width: 500px; height: 1000px;
+ border-radius: 100% 0 100% 0; /* Distinct Leaf shape */
+ margin-top: -500px; margin-left: 150px;
+ animation: floatPane3 40s infinite ease-in-out alternate;
+ }
+ .pane-4 {
+ width: 300px; height: 800px;
+ border-radius: 0 100% 0 100%; /* Distinct Leaf shape */
+ margin-top: -400px; margin-left: -500px;
+ animation: floatPane4 25s infinite ease-in-out alternate;
+ }
+ .pane-5 {
+ width: 1000px; height: 450px;
+ border-radius: 100% 0 100% 0; /* Distinct Leaf shape */
+ margin-top: 200px; margin-left: -500px;
+ animation: floatPane5 32s infinite ease-in-out alternate;
+ }
+
+ @keyframes floatPane1 {
+ 0% { transform: rotateY(0deg) rotateX(15deg) translateZ(-300px); }
+ 100% { transform: rotateY(180deg) rotateX(-15deg) translateZ(150px); }
+ }
+ @keyframes floatPane2 {
+ 0% { transform: rotateX(0deg) rotateY(-25deg) translateZ(100px); }
+ 100% { transform: rotateX(180deg) rotateY(35deg) translateZ(-400px); }
+ }
+ @keyframes floatPane3 {
+ 0% { transform: rotateZ(0deg) rotateX(45deg) translateZ(-200px); }
+ 100% { transform: rotateZ(90deg) rotateX(-45deg) translateZ(300px); }
+ }
+ @keyframes floatPane4 {
+ 0% { transform: rotateY(-35deg) rotateZ(15deg) translateZ(200px); }
+ 100% { transform: rotateY(145deg) rotateZ(-15deg) translateZ(-300px); }
+ }
+ @keyframes floatPane5 {
+ 0% { transform: rotateX(35deg) rotateY(0deg) translateZ(-200px); }
+ 100% { transform: rotateX(-35deg) rotateY(180deg) translateZ(100px); }
+ }
+
+
+ 
+
+
+ 
+
+
+ /* HERO ARCHITECTURAL GRID - removed */
+ .hero::before, .logos::before {
+ display: none;
+ }
+
+ /* STEM TYPOGRAPHY BG */
+ .stem-bg {
+ position: absolute;
+ top: -50%; left: -50%; width: 200%; height: 200%;
+ z-index: 0;
+ pointer-events: none;
+ overflow: hidden;
+ transform: rotate(-12deg);
+ display: flex;
+ flex-direction: column;
+ gap: 80px;
+ justify-content: center;
+ opacity: 1; 
+ }
+ .stem-track {
+ display: flex;
+ white-space: nowrap;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 80px;
+ font-weight: 700;
+ }
+ .track-1 {
+ animation: scrollLeft 120s linear infinite;
+ color: rgba(163, 31, 52, 0.07); /* MIT Red */
+ }
+ .track-2 {
+ animation: scrollRight 140s linear infinite;
+ margin-left: -500px;
+ color: rgba(0, 50, 98, 0.07); /* Berkeley Blue */
+ }
+ .track-3 {
+ animation: scrollLeft 130s linear infinite;
+ margin-left: -200px;
+ color: rgba(231, 117, 0, 0.07); /* Princeton Orange */
+ }
+ @keyframes scrollLeft {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(-990px); }
+ }
+ @keyframes scrollRight {
+ 0% { transform: translateX(-50%); }
+ 100% { transform: translateX(-990px); }
+ }
+
+
+ /* Methodology Stack-to-Spread Entrance Animation */
+ .framework-grid {
+ overflow: visible;
+ }
+ 
+ /* Initial state: grouped in the center, transparent, slightly scaled down */
+ .framework-grid.stacked .step-card:nth-child(1) { transform: translateX(150%) scale(0.8) rotate(-5deg); opacity: 0; }
+ .framework-grid.stacked .step-card:nth-child(2) { transform: translateX(50%) scale(0.8) rotate(-2deg); opacity: 0; }
+ .framework-grid.stacked .step-card:nth-child(3) { transform: translateX(-50%) scale(0.8) rotate(2deg); opacity: 0; }
+ .framework-grid.stacked .step-card:nth-child(4) { transform: translateX(-150%) scale(0.8) rotate(5deg); opacity: 0; }
+
+ /* Spread state: normal */
+ .framework-grid .step-card {
+ transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease, box-shadow 0.4s ease !important;
+ }
+ 
+ /* Need to ensure hover state doesn't get messed up by transition. 
+ The above transition will be active. So hover transform should work. */
+
+
+ @media (max-width: 1000px) {
+ #placements .container { flex-direction: column !important; }
+ .impact-narrative { width: 100% !important; flex: none !important; position: static !important; }
+ .impact-table-container { width: 100% !important; overflow-x: auto; }
+ .impact-table th, .impact-table td { padding: 16px !important; }
+ }
+
+ /* TABLE CSS UPDATE */
+ .table-wrapper {
+ overflow-x: auto;
+ background: rgba(255, 255, 255, 0.7);
+ border-radius: 12px;
+ border: 1px solid #5a8fc4;
+ box-shadow: 0 10px 30px rgba(43, 66, 91, 0.1);
+ }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 18px;
+ }
+ th, td {
+ padding: 24px;
+ text-align: left;
+ border-bottom: 1px solid rgba(90, 143, 196, 0.3);
+ border-right: 1px solid rgba(90, 143, 196, 0.2);
+ }
+ th:last-child, td:last-child {
+ border-right: none;
+ }
+ th {
+ background: #eef4fb;
+ color: #2b425b;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-size: 16px;
+ border-bottom: 2px solid #5a8fc4;
+ }
+ td {
+ color: #2b425b;
+ }
+ tr:last-child td {
+ border-bottom: none;
+ }
+ .badge {
+ padding: 8px 16px;
+ border-radius: 50px;
+ font-size: 18px;
+ font-weight: 600;
+ background: #2b425b;
+ color: white;
+ display: inline-block;
+ }
+
+
+ /* TESTIMONIAL CAROUSEL */
+ .testimonial-carousel {
+ position: relative;
+ width: 100%;
+ max-width: 900px;
+ margin: 0 auto;
+ overflow: hidden;
+ }
+ .carousel-track-container {
+ overflow: hidden;
+ width: 100%;
+ }
+ .carousel-track {
+ display: flex;
+ transition: transform 0.5s ease-in-out;
+ }
+ .carousel-slide {
+ min-width: 100%;
+ box-sizing: border-box;
+ padding: 10px;
+ }
+ .carousel-nav {
+ display: flex;
+ justify-content: center;
+ gap: 12px;
+ margin-top: 30px;
+ }
+ .carousel-indicator {
+ width: 12px;
+ height: 12px;
+ border-radius: 50%;
+ background: rgba(43, 66, 91, 0.2);
+ border: none;
+ cursor: pointer;
+ padding: 0;
+ transition: background 0.3s ease;
+ }
+ .carousel-indicator.current-indicator {
+ background: #2b425b;
+ }
+ /* Remove old quotes-grid if needed, but we can just leave it */
+
+ /* CTA SECTION */
+ .cta {
+ background: linear-gradient(135deg, #0d1f35 0%, #2b425b 60%, #3d5a80 100%);
+ padding: 50px 0;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+ .cta::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse at 30% 50%, rgba(90,143,196,0.2) 0%, transparent 60%),
+ radial-gradient(ellipse at 70% 50%, rgba(43,66,91,0.3) 0%, transparent 60%);
+ pointer-events: none;
+ }
+ .cta h2 {
+ font-size: 56px;
+ font-weight: 700;
+ color: #ffffff;
+ font-family: 'Cormorant Garamond', serif;
+ margin-bottom: 16px;
+ position: relative;
+ z-index: 1;
+ }
+ .cta p {
+ font-size: 20px;
+ color: rgba(255,255,255,0.75);
+ margin-bottom: 40px;
+ position: relative;
+ z-index: 1;
+ }
+ .btn-cta {
+ background: #ffffff;
+ color: #2b425b;
+ padding: 18px 48px;
+ border: none;
+ font-size: 13px;
+ font-weight: 700;
+ cursor: pointer;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ border-radius: 50px;
+ transition: all 0.3s ease;
+ position: relative;
+ z-index: 1;
+ }
+ .btn-cta:hover {
+ background: #5a8fc4;
+ color: #ffffff;
+ transform: translateY(-2px);
+ box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+ }
+
+ /* FOOTER */
+ footer {
+ background: #0a1628;
+ padding: 70px 0 30px;
+ border-top: 3px solid #1e3a5f;
+ }
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1fr;
+ gap: 50px;
+ padding-bottom: 50px;
+ border-bottom: 1px solid rgba(90,143,196,0.2);
+ }
+ .footer-col h4 {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 18px;
+ font-weight: 700;
+ color: #5a8fc4;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ margin-bottom: 20px;
+ }
+ .footer-col p {
+ font-size: 15px;
+ color: rgba(255,255,255,0.55);
+ line-height: 1.8;
+ }
+ .footer-col ul {
+ list-style: none;
+ padding: 0;
+ }
+ .footer-col ul li {
+ margin-bottom: 10px;
+ }
+ .footer-col ul li a {
+ font-size: 15px;
+ color: rgba(255,255,255,0.55);
+ text-decoration: none;
+ transition: color 0.2s ease;
+ }
+ .footer-col ul li a:hover {
+ color: #5a8fc4;
+ }
+ .footer-bottom {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-top: 30px;
+ }
+ .footer-bottom p {
+ font-size: 13px;
+ color: rgba(255,255,255,0.35);
+ }
+ .social-links a {
+ font-size: 13px;
+ color: rgba(255,255,255,0.35);
+ text-decoration: none;
+ margin-left: 20px;
+ letter-spacing: 1px;
+ transition: color 0.2s ease;
+ }
+ .social-links a:hover {
+ color: #5a8fc4;
+ }
+
+
+ /* HERO SLIDESHOW */
+ .hero-slideshow {
+ position: relative;
+ z-index: 2;
+ min-height: 420px;
+ overflow: hidden;
+ }
+ .hero-slide {
+ display: none;
+ animation: heroFadeIn 0.8s ease;
+ padding: 60px 0 80px;
+ }
+ .hero-slide.active {
+ display: block;
+ }
+ @keyframes heroFadeIn {
+ from { opacity: 0; transform: translateY(12px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+ .hero-badge {
+ display: inline-block;
+ background: rgba(43, 66, 91, 0.12);
+ color: #2b425b;
+ font-size: 12px;
+ font-weight: 700;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ padding: 8px 20px;
+ border-radius: 50px;
+ margin-bottom: 24px;
+ border: 1px solid rgba(43,66,91,0.2);
+ }
+ .hero-badge-quote {
+ background: rgba(90,143,196,0.15);
+ color: #1e3a5f;
+ border-color: rgba(90,143,196,0.3);
+ }
+ .hero-badge-impact {
+ background: rgba(30,58,95,0.12);
+ color: #1e3a5f;
+ border-color: rgba(30,58,95,0.25);
+ }
+ .hero-testimonial-slide {
+ max-width: 900px;
+ }
+ /* Per-slide background overlays */
+ #hslide-0 { background: transparent; }
+ #hslide-1 {
+ background: linear-gradient(135deg, rgba(30,58,95,0.04) 0%, rgba(90,143,196,0.10) 100%);
+ border-left: 5px solid #5a8fc4;
+ border-radius: 0 0 0 0;
+ }
+ #hslide-2 {
+ background: linear-gradient(135deg, rgba(61,90,128,0.05) 0%, rgba(43,66,91,0.12) 100%);
+ border-left: 5px solid #3d5a80;
+ }
+ #hslide-3 {
+ background: linear-gradient(135deg, rgba(10,22,40,0.06) 0%, rgba(30,58,95,0.14) 100%);
+ border-left: 5px solid #1e3a5f;
+ }
+ /* Two-col layout for slides */
+ .hero-slide-inner {
+ display: grid;
+ grid-template-columns: 1fr 380px;
+ gap: 60px;
+ align-items: center;
+ }
+ .hero-slide-right {
+ background: linear-gradient(160deg, #1e3a5f 0%, #2b425b 100%);
+ border-radius: 20px;
+ padding: 40px 36px;
+ color: white;
+ box-shadow: 0 20px 60px rgba(10,22,40,0.2);
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-slide-right::before {
+ content: '';
+ position: absolute;
+ width: 200px;
+ height: 200px;
+ border-radius: 50%;
+ background: rgba(90,143,196,0.15);
+ top: -60px;
+ right: -60px;
+ }
+ .slide-stat {
+ margin-bottom: 28px;
+ position: relative;
+ z-index: 1;
+ }
+ .slide-stat-num {
+ font-size: 44px;
+ font-weight: 800;
+ font-family: 'Cormorant Garamond', serif;
+ color: #ffffff;
+ line-height: 1;
+ margin-bottom: 4px;
+ }
+ .slide-stat-label {
+ font-size: 12px;
+ color: rgba(255,255,255,0.6);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: 600;
+ }
+ .slide-stat-divider {
+ border: none;
+ border-top: 1px solid rgba(255,255,255,0.1);
+ margin: 20px 0;
+ }
+ /* Testimonial slide right panel */
+ .hero-slide-right-quote {
+ background: linear-gradient(160deg, #0d1f35 0%, #1e3a5f 100%);
+ border-radius: 20px;
+ padding: 40px 36px;
+ color: white;
+ box-shadow: 0 20px 60px rgba(10,22,40,0.25);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 16px;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-slide-right-quote::before {
+ content: '\201C';
+ position: absolute;
+ font-size: 200px;
+ font-family: 'Cormorant Garamond', serif;
+ color: rgba(90,143,196,0.12);
+ top: -30px;
+ left: 10px;
+ line-height: 1;
+ }
+ /* Photo panel on right side of slides */
+ .hero-slide-photo {
+ width: 100%;
+ height: 420px;
+ border-radius: 20px;
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ overflow: hidden;
+ box-shadow: 0 24px 60px rgba(10,22,40,0.2);
+ }
+ .hero-slide-photo::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(135deg, rgba(30,58,95,0.15) 0%, transparent 60%);
+ border-radius: 20px;
+ }
+
+ .slide-uni-badge {
+ display: inline-block;
+ padding: 10px 18px;
+ border-radius: 10px;
+ font-size: 13px;
+ font-weight: 700;
+ letter-spacing: 1px;
+ margin-bottom: 4px;
+ position: relative;
+ z-index: 1;
+ }
+ .hero-quote-mark {
+ font-size: 120px;
+ line-height: 0.5;
+ color: #5a8fc4;
+ font-family: 'Cormorant Garamond', serif;
+ margin-bottom: 20px;
+ opacity: 0.4;
+ }
+ .hero-quote-text {
+ font-size: 26px !important;
+ color: #2b425b !important;
+ font-style: italic;
+ line-height: 1.6;
+ margin-bottom: 20px !important;
+ }
+ .hero-quote-author {
+ font-size: 16px;
+ color: #5a8fc4;
+ font-weight: 600;
+ letter-spacing: 1px;
+ }
+ .hero-arrow {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ background: rgba(43,66,91,0.1);
+ border: 1px solid rgba(43,66,91,0.2);
+ color: #2b425b;
+ font-size: 36px;
+ width: 52px;
+ height: 52px;
+ border-radius: 50%;
+ cursor: pointer;
+ z-index: 10;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.2s ease;
+ line-height: 1;
+ }
+ .hero-arrow:hover {
+ background: #2b425b;
+ color: white;
+ }
+ .hero-arrow-prev { left: 24px; }
+ .hero-arrow-next { right: 24px; }
+ .hero-dots {
+ position: absolute;
+ bottom: 20px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 10px;
+ z-index: 10;
+ }
+ .hero-dot {
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ background: rgba(43,66,91,0.25);
+ cursor: pointer;
+ transition: all 0.3s ease;
+ border: none;
+ }
+ .hero-dot.active {
+ background: #2b425b;
+ width: 28px;
+ border-radius: 5px;
+ }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    padding: 80px 0;
+    background: #f4f3ef;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  .contact-left h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #2b425b;
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .contact-left p {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .contact-info-block {
+    margin-bottom: 20px;
+  }
+  .contact-info-block strong {
+    display: block;
+    font-size: 14px;
+    color: #2b425b;
+    margin-bottom: 8px;
+  }
+  .contact-info-block span {
+    font-size: 16px;
+    color: #4a5568;
+  }
+  .contact-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(43, 66, 91, 0.08);
+    border: 1px solid rgba(43, 66, 91, 0.1);
+  }
+  .form-group {
+    margin-bottom: 24px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #5a8fc4;
+    box-shadow: 0 0 0 3px rgba(90, 143, 196, 0.2);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  
+  /* SEMINARS SECTION */
+  .seminars-section {
+    padding: 100px 0;
+    background: #ffffff;
+  }
+  .seminars-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .seminars-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2b425b;
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .seminars-header p {
+    font-size: 18px;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .seminars-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 768px) {
+    .seminars-grid { grid-template-columns: 1fr; }
+  }
+  .seminar-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+  .seminar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(43, 66, 91, 0.08);
+    border-color: #5a8fc4;
+  }
+  .seminar-date {
+    display: inline-block;
+    background: rgba(90, 143, 196, 0.1);
+    color: #5a8fc4;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .seminar-card h3 {
+    font-size: 28px;
+    color: #2b425b;
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+  }
+  .seminar-card p {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .seminar-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #2b425b;
+    color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #2b425b;
+  }
+  .seminar-btn:hover {
+    background: transparent;
+    color: #2b425b;
+  }
+
+  /* SEMINAR MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(9, 21, 43, 0.7);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .modal-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 750px; /* Made larger */
+    border-radius: 16px;
+    padding: 60px; /* More padding */
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 28px;
+    color: #4a5a6a;
+    cursor: pointer;
+    background: none; border: none;
+    line-height: 1;
+  }
+  .modal-close:hover { color: #e53e3e; }
+  .modal-card h3 {
+    font-size: 34px;
+    color: #2b425b;
+    margin-bottom: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+  }
+  .modal-card p {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .modal-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  .modal-btn-1 {
+    background: #2b425b;
+    color: #ffffff;
+    border: 2px solid #2b425b;
+  }
+  .modal-btn-1:hover { background: #3d5a80; border-color: #3d5a80; }
+
+  /* COMPREHENSIVE MOBILE FIXES */
+
+    /* Header Fixes */
+    .header-inner nav { display: none !important; }
+    .header-inner { padding: 15px 0 !important; }
+    .logo { font-size: 24px !important; }
+    .btn-header { padding: 10px 16px !important; font-size: 11px !important; }
+  @media (max-width: 768px) {
+    /* Container & Layout */
+    .container { padding: 0 20px !important; }
+    
+    /* Hero Section */
+    .hero { 
+      height: auto !important; 
+      min-height: 100vh !important; 
+      padding: 120px 0 60px 0 !important; 
+    }
+    .hero-slide { height: auto !important; min-height: 100vh !important; }
+    .hero-slide-inner { padding: 0 !important; display: flex !important; flex-direction: column !important; gap: 30px !important; }
+    .hero-content { margin-top: 20px !important; padding: 0 !important; max-width: 100% !important; }
+    .hero h1 { font-size: 38px !important; line-height: 1.1 !important; margin-bottom: 15px !important; }
+    .hero p { font-size: 16px !important; margin-bottom: 25px !important; }
+    
+    /* Typography */
+    h2 { font-size: 32px !important; }
+    h3 { font-size: 24px !important; }
+    p { font-size: 16px !important; line-height: 1.5 !important; }
+    
+    /* Modal */
+    .modal-card { 
+      padding: 30px 20px !important; 
+      width: 95% !important; 
+    }
+    .modal-card h3 { font-size: 26px !important; }
+    
+    /* Tables */
+    table { font-size: 14px !important; }
+    th, td { padding: 10px !important; }
+    
+    /* Sections */
+    section { padding: 60px 0 !important; }
+    .services, #framework, #placements, #about, #impact, .seminars-section { padding: 50px 0 !important; }
+    
+    /* Testimonials */
+    .quote-card { padding: 25px !important; }
+    
+    /* Framework / Timeline */
+    .step-box { padding: 25px !important; }
+    
+    /* Footers */
+    .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+  }
+
+  /* CHECKOUT MODAL STYLES */
+  .checkout-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 10005;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: 'Outfit', sans-serif;
+  }
+  .checkout-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 780px;
+    border-radius: 24px;
+    box-shadow: 0 30px 70px rgba(10, 22, 40, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: checkoutSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes checkoutSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .checkout-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #475569;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+  }
+  .checkout-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: scale(1.05);
+  }
+  .checkout-body {
+    padding: 40px;
+  }
+  @media (max-width: 640px) {
+    .checkout-body { padding: 24px; }
+  }
+  
+  /* Steps indicator */
+  .checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .checkout-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  .checkout-step-progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2b425b;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+  }
+  .checkout-step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #64748b;
+    z-index: 2;
+    transition: all 0.3s ease;
+    font-size: 15px;
+  }
+  .checkout-step.active {
+    border-color: #2b425b;
+    background: #2b425b;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(43, 66, 91, 0.15);
+  }
+  .checkout-step.completed {
+    border-color: #2b425b;
+    background: #ffffff;
+    color: #2b425b;
+  }
+  
+  /* Form content */
+  .checkout-form-step {
+    display: none;
+  }
+  .checkout-form-step.active {
+    display: block;
+  }
+  
+  .checkout-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #2b425b;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .checkout-subtitle {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  /* Form inputs */
+  .checkout-form-group {
+    margin-bottom: 20px;
+  }
+  .checkout-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b425b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .checkout-input, .checkout-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #0f172a;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.2s;
+    background: #f8fafc;
+  }
+  .checkout-input:focus, .checkout-select:focus {
+    outline: none;
+    border-color: #5a8fc4;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(90, 143, 196, 0.15);
+  }
+  .checkout-row {
+    display: flex;
+    gap: 16px;
+  }
+  .checkout-col-6 {
+    flex: 1;
+  }
+  
+  /* Styled Radio/Card Selector for Packages */
+  .package-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 640px) {
+    .package-cards { grid-template-columns: 1fr; }
+  }
+  .package-card-option {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+  }
+  .package-card-option:hover {
+    border-color: #7aa8d9;
+    background: #fafbfc;
+  }
+  .package-card-option.selected {
+    border-color: #2b425b;
+    background: rgba(122, 168, 217, 0.05);
+    box-shadow: 0 4px 20px rgba(43, 66, 91, 0.08);
+  }
+  .package-card-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .package-card-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2b425b;
+    margin-bottom: 4px;
+  }
+  .package-card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2b425b;
+    margin-bottom: 8px;
+  }
+  .package-card-desc {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.4;
+  }
+  
+  /* Payment methods */
+  .payment-method-selector {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .payment-method-card {
+    flex: 1;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    font-weight: 600;
+    font-size: 15px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+  }
+  .payment-method-card:hover {
+    border-color: #7aa8d9;
+  }
+  .payment-method-card.selected {
+    border-color: #2b425b;
+    color: #2b425b;
+    background: rgba(122, 168, 217, 0.05);
+  }
+  .payment-method-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Interactive Credit Card UI */
+  .credit-card-preview {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2b425b 100%);
+    border-radius: 15px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .credit-card-preview::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    pointer-events: none;
+  }
+  .card-preview-chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
+    border-radius: 5px;
+  }
+  .card-preview-number {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  .card-preview-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .card-preview-name {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-preview-expiry {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Zelle UI */
+  .zelle-instructions {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .zelle-destination-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 2px dashed #7aa8d9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  .zelle-destination-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+  }
+  .zelle-destination-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1e3a5f;
+    letter-spacing: 0.5px;
+  }
+  .zelle-copy-btn {
+    background: #2b425b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .zelle-copy-btn:hover {
+    background: #1e3a5f;
+  }
+  
+  /* Buttons */
+  .checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    gap: 16px;
+  }
+  .btn-checkout-prev {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-checkout-prev:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+  .btn-checkout-next, .btn-checkout-submit {
+    flex: 1;
+    background: #2b425b;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(43, 66, 91, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-checkout-next:hover, .btn-checkout-submit:hover {
+    background: #1e3a5f;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(30, 58, 95, 0.2);
+  }
+  
+  /* Success step */
+  .checkout-success-view {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .checkout-success-icon {
+    width: 80px;
+    height: 80px;
+    background: #ecfdf5;
+    color: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 24px;
+    border: 2px solid #a7f3d0;
+  }
+  .checkout-success-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: #065f46;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  /* Loading Spinner */
+  .checkout-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: checkoutSpin 0.8s linear infinite;
+    margin-right: 10px;
+    display: none;
+  }
+  @keyframes checkoutSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="premium-glass-bg">
+ <div class="orb orb-1"></div>
+ <div class="orb orb-2"></div>
+ <div class="orb orb-3"></div>
+ <div class="orb orb-4"></div>
+</div>
+
+<!-- HEADER -->
+<header>
+ <div class="container">
+ <div class="header-inner">
+ <a href="#" class="logo">AXIOM</a>
+ <nav>
+ <a href="#services">Services</a>
+ <a href="#impact">Impact</a>
+ <a href="#placements">Placements</a>
+ <a href="#testimonials">Testimonials</a>
+ </nav>
+ <div class="header-right">
+ <a href="javascript:void(0)" onclick="document.getElementById('seminarModal').style.display='flex'" class="btn-header" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Talk to the Expert</a>
+ </div>
+ </div>
+ </div>
+</header>
+
+
+
+
+
+<!-- HERO -->
+<section class="hero">
+ <div style="padding: 0; position: relative; background: transparent;">
+ <div class="container">
+ <h2 class="section-title" style="display: inline-block; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, #1e3a5f, #5a8fc4, #3d5a80) 1; padding-bottom: 6px;">Students Have Worked With</h2>
+ </div>
+ <div class="marquee-container">
+ <div class="marquee-track">
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ <div class="logo-box mit">MIT</div>
+ <div class="logo-box stanford">Stanford</div>
+ <div class="logo-box cmu">CMU</div>
+ <div class="logo-box princeton">Princeton</div>
+ <div class="logo-box berkeley">UC Berkeley</div>
+ <div class="logo-box upenn">UPenn</div>
+      <div class="logo-box jhu">Johns Hopkins</div>
+      <div class="logo-box stjude">St. Jude's</div>
+      <div class="logo-box oregon">Oregon State</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="stem-bg">
+ <div class="stem-track track-1">
+ <span>∇ × E = -∂B/∂t • ∫ e^{-x^2} dx = √π • Transformer(x) = Softmax(QK^T / √d_k)V • E(R) = R_f + β(E(R_m) - R_f) • NPV = Σ R_t/(1+i)^t • def optimize_portfolio(weights): • SELECT * FROM market_data WHERE vol > 1M • ∇²ψ + (2m/ℏ²)(E - V)ψ = 0 • while(True): analyze() • O(n log n) • </span>
+ <span>∇ × E = -∂B/∂t • ∫ e^{-x^2} dx = √π • Transformer(x) = Softmax(QK^T / √d_k)V • E(R) = R_f + β(E(R_m) - R_f) • NPV = Σ R_t/(1+i)^t • def optimize_portfolio(weights): • SELECT * FROM market_data WHERE vol > 1M • ∇²ψ + (2m/ℏ²)(E - V)ψ = 0 • while(True): analyze() • O(n log n) • </span>
+ </div>
+ <div class="stem-track track-2">
+ <span>v = Vmax[S]/(Km+[S]) • C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP • import pandas as pd; df.groupby('sector').mean() • σ(x) = 1 / (1 + e^{-x}) • Hψ = Eψ • d1 = (ln(S/K) + (r + σ²/2)t) / σ√t • ⌬-OH (Phenol) • class NeuralNet(nn.Module): • ∀x ∈ ℝ, ∃y ∈ ℝ • Σ (x_i - μ)² / N • CRISPR-Cas9 • </span>
+ <span>v = Vmax[S]/(Km+[S]) • C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP • import pandas as pd; df.groupby('sector').mean() • σ(x) = 1 / (1 + e^{-x}) • Hψ = Eψ • d1 = (ln(S/K) + (r + σ²/2)t) / σ√t • ⌬-OH (Phenol) • class NeuralNet(nn.Module): • ∀x ∈ ℝ, ∃y ∈ ℝ • Σ (x_i - μ)² / N • CRISPR-Cas9 • </span>
+ </div>
+ <div class="stem-track track-3">
+ <span>Black-Scholes: C = N(d1)S_t - N(d2)Ke^{-rt} • 5'-ATGCGTAC-3' • G_{μν} + Λg_{μν} = (8πG/c^4) T_{μν} • df/dx = lim_{h→0} (f(x+h) - f(x))/h • return { 'status': 200, 'model': 'converged' } • X_{k} = Σ x_n e^{-i 2π k n / N} • W^T X + b > 0 • E = mc² • ROI = (Net Profit / Cost) * 100 • </span>
+ <span>Black-Scholes: C = N(d1)S_t - N(d2)Ke^{-rt} • 5'-ATGCGTAC-3' • G_{μν} + Λg_{μν} = (8πG/c^4) T_{μν} • df/dx = lim_{h→0} (f(x+h) - f(x))/h • return { 'status': 200, 'model': 'converged' } • X_{k} = Σ x_n e^{-i 2π k n / N} • W^T X + b > 0 • E = mc² • ROI = (Net Profit / Cost) * 100 • </span>
+ </div>
+ <div class="stem-track track-1">
+ <span>∇ × E = -∂B/∂t • ∫ e^{-x^2} dx = √π • Transformer(x) = Softmax(QK^T / √d_k)V • NPV = Σ R_t/(1+i)^t • O(n log n) • </span>
+ <span>∇ × E = -∂B/∂t • ∫ e^{-x^2} dx = √π • Transformer(x) = Softmax(QK^T / √d_k)V • NPV = Σ R_t/(1+i)^t • O(n log n) • </span>
+ </div>
+ <div class="stem-track track-2">
+ <span>CRISPR-Cas9 • σ(x) = 1 / (1 + e^{-x}) • Hψ = Eψ • class NeuralNet(nn.Module): • ∀x ∈ ℝ, ∃y ∈ ℝ • Σ (x_i - μ)² / N • </span>
+ <span>CRISPR-Cas9 • σ(x) = 1 / (1 + e^{-x}) • Hψ = Eψ • class NeuralNet(nn.Module): • ∀x ∈ ℝ, ∃y ∈ ℝ • Σ (x_i - μ)² / N • </span>
+ </div>
+ <div class="stem-track track-3">
+ <span>E = mc² • ROI = (Net Profit / Cost) * 100 • W^T X + b > 0 • return { 'status': 200, 'model': 'converged' } • </span>
+ <span>E = mc² • ROI = (Net Profit / Cost) * 100 • W^T X + b > 0 • return { 'status': 200, 'model': 'converged' } • </span>
+ </div>
+ </div>
+
+ <!-- HERO SLIDESHOW -->
+ <div class="hero-slideshow" id="heroSlideshow">
+
+ <!-- Slide 1: Main pitch -->
+ <div class="hero-slide active" id="hslide-0">
+ <div class="container">
+ <div class="hero-slide-inner">
+ <div class="hero-content">
+ <div class="hero-badge">MIT CSAIL &amp; CMU Research</div>
+ <h1>Expert Guidance from an MIT, CMU Researcher Ishaani</h1>
+ <p>Secure your position at MIT, Stanford, CMU, and the world&rsquo;s most prestigious research institutions. My proven framework places 95%+ of my students.</p>
+ <div class="hero-buttons">
+ <a href="javascript:void(0)" onclick="document.getElementById('seminarModal').style.display='flex'" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Talk to the Expert</a>
+ 
+ </div>
+ </div>
+ <div class="hero-slide-photo" style="background-image: url('slide1_students.png');"></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 2: Testimonial 1 -->
+ <div class="hero-slide" id="hslide-1">
+ <div class="container">
+ <div class="hero-slide-inner">
+ <div class="hero-content hero-testimonial-slide">
+ <div class="hero-badge hero-badge-quote">Student Success Story</div>
+ <div class="hero-quote-mark">&ldquo;</div>
+ <p class="hero-quote-text">I sent out almost 50 emails to professors on my own and got zero replies. The outreach framework completely changed my approach. Within two weeks of using the new strategy, I secured an interview at UPenn. The process suddenly made sense.</p>
+ <div class="hero-quote-author"> High School Junior, STEM Placement</div>
+ <div class="hero-buttons" style="margin-top: 30px;">
+ <a href="#impact" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">See All Stories</a>
+ </div>
+ </div>
+ <div class="hero-slide-photo" style="background-image: url('slide2_studying.png');"></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 3: Testimonial 2 -->
+ <div class="hero-slide" id="hslide-2">
+ <div class="container">
+ <div class="hero-slide-inner">
+ <div class="hero-content hero-testimonial-slide">
+ <div class="hero-badge hero-badge-quote">Student Success Story</div>
+ <div class="hero-quote-mark">&ldquo;</div>
+ <p class="hero-quote-text">I knew I wanted to do applied machine learning research, but I didn&rsquo;t know how to translate my coding projects into a resume a professor would care about. The two-week sprint was intense, but it directly led to an offer.</p>
+ <div class="hero-quote-author"> 12th Grade Student, AI/ML Placement</div>
+ <div class="hero-buttons" style="margin-top: 30px;">
+ <a href="#impact" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">See All Stories</a>
+ </div>
+ </div>
+ <div class="hero-slide-photo" style="background-image: url('slide3_coding.png');"></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide 4: Impact -->
+ <div class="hero-slide" id="hslide-3">
+ <div class="container">
+ <div class="hero-slide-inner">
+ <div class="hero-content">
+ <div class="hero-badge hero-badge-impact">The Axiom Impact</div>
+ <h1>MIT CSAIL &amp; Stanford Dual Offers for an 8th Grader</h1>
+ <p>&ldquo;Ishaani&rsquo;s approach is incredibly well thought out she knows exactly what she&rsquo;s doing. Her guidance and exclusive frameworks truly made this possible.&rdquo;</p>
+ <div class="hero-buttons">
+ <a href="#placements" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Read the Story</a>
+ </div>
+ </div>
+ <div class="hero-slide-photo" style="background-image: url('slide4_research.png');"></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Controls -->
+ <button class="hero-arrow hero-arrow-prev" id="heroPrev">&#8249;</button>
+ <button class="hero-arrow hero-arrow-next" id="heroNext">&#8250;</button>
+ <div class="hero-dots" id="heroDots">
+ <span class="hero-dot active" data-slide="0"></span>
+ <span class="hero-dot" data-slide="1"></span>
+ <span class="hero-dot" data-slide="2"></span>
+ <span class="hero-dot" data-slide="3"></span>
+ </div>
+ </div>
+
+</section>
+
+
+
+<!-- LOGOS -->
+
+
+<section class="stats" id="impact" style="overflow: hidden;">
+ <div class="marquee-container" style="background: transparent; border: none; padding: 0; margin: 0; width: 100vw; position: relative; left: 50%; transform: translateX(-50%);">
+ <div class="marquee-track" style="animation: scrollRight 25s linear infinite; gap: 60px;">
+ <!-- Original Set -->
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">95%+</div>
+ <div class="stat-label">Student Success Rate</div>
+ </div>
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">Top 10</div>
+ <div class="stat-label">Universities & Labs</div>
+ </div>
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">100%</div>
+ <div class="stat-label">Positive Response Rate Increase</div>
+ </div>
+ <div class="stat-item" style="min-width: 380px;">
+ <div class="stat-number">Middle School<br>to College</div>
+ <div class="stat-label">Academic Stages Supported</div>
+ </div>
+ 
+ <!-- Duplicate Set for Seamless Scrolling -->
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">95%+</div>
+ <div class="stat-label">Student Success Rate</div>
+ </div>
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">Top 10</div>
+ <div class="stat-label">Universities & Labs</div>
+ </div>
+ <div class="stat-item" style="min-width: 350px;">
+ <div class="stat-number">100%</div>
+ <div class="stat-label">Positive Response Rate Increase</div>
+ </div>
+ <div class="stat-item" style="min-width: 380px;">
+ <div class="stat-number">Middle School<br>to College</div>
+ <div class="stat-label">Academic Stages Supported</div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- AXIOM IMPACT TABLE -->
+<!-- AXIOM IMPACT TABLE -->
+<section class="table-section" id="placements" style="padding: 120px 0;">
+ <div class="container">
+ <h2 class="section-title" style="margin-bottom: 20px; font-size: 64px; font-weight: 700; color: #2b425b; font-family: 'Cormorant Garamond', serif; text-align: center;">Student Placements</h2>
+ <div style="text-align: center; margin-bottom: 60px;">
+ <p style="display: inline-block; font-size: 20px; color: #2b425b; font-weight: 600; background: rgba(122, 168, 217, 0.1); padding: 15px 30px; border-radius: 50px; border: 1px solid rgba(122, 168, 217, 0.2);">Started just two months ago, and already achieving extraordinary results.</p>
+ </div>
+ 
+ <div class="table-wrapper">
+ <table>
+ <thead>
+ <tr>
+ <th>Institution</th>
+ <th>Research Area</th>
+ <th>Term</th>
+ </tr>
+ </thead>
+ <tbody>
+     <tr>
+  <td><strong>UIUC</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>Princeton</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>MIT</strong></td>
+  <td>STEM</td>
+  <td>Summer 2026</td>
+  </tr>
+     <tr>
+  <td><strong>Johns Hopkins</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>UPenn</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>Stanford</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>St. Jude's Hospital</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>Notre Dame</strong></td>
+  <td>Business/Finance</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>UCSC</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+     <tr>
+  <td><strong>UCI</strong></td>
+  <td>Public Policy</td>
+  <td>Summer 2026</td>
+  </tr>
+     <tr>
+  <td><strong>UC Berkeley</strong></td>
+  <td>STEM</td>
+  <td>Fall 2026</td>
+  </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+</section>
+
+<section class="social-proof-section" id="impact-stories">
+ <div class="container">
+ <h2 class="section-title" style="font-size: 72px; font-weight: 800; text-align: center; color: #2b425b; font-family: 'Cormorant Garamond', serif; letter-spacing: -3px; margin-bottom: 60px; line-height: 1;">The Axiom Impact</h2>
+ 
+ 
+ <div class="case-study-card">
+ <div class="cs-content">
+ <div class="cs-label">The Challenge</div>
+ <h3 class="cs-title">Securing an MIT CSAIL Offer as an 8th Grader</h3>
+ <div class="cs-text">An incredibly ambitious 8th grader possessed exceptional potential but needed a way to showcase his talent to elite university labs outside of traditional, restrictive summer programs.</div>
+ 
+ <div class="cs-label">The Strategy</div>
+ <div class="cs-text">We embarked on an intensive profile sprint to translate his foundational skills into a compelling narrative. From there, we developed a highly targeted outreach strategy, connecting him directly with leading Principal Investigators whose cutting-edge research perfectly aligned with his passions.</div>
+ </div>
+ <div class="cs-highlight">
+ <div class="cs-image" style="background-image: url('simr_student.jpg');"></div>
+ <p style="font-size: 16px; color: #2b425b; font-weight: 600; margin-bottom: 20px; font-style: italic;">Pictured with the President of Stanford OHS</p>
+ <div class="cs-title" style="color: #2b425b; font-size: 48px; margin-bottom: 10px;">MIT CSAIL & Stanford</div>
+ <div class="cs-label" style="color: #2b425b;">Dual Research Offers</div>
+ <p style="margin-top: 10px; color: #5a6d7a; font-style: italic; font-size: 18px; line-height: 1.6;">"Ishaani's approach is incredibly well thought outshe knows exactly what she's doing. Her guidance, experience, and exclusive frameworks truly made this possible. I wouldn't be where I am without her mentorship. She is straightforward, exceptionally accommodating, and provides insights you simply cannot find anywhere else online."</p>
+ </div>
+ </div>
+
+ <div class="case-study-card">
+ <div class="cs-content">
+ <div class="cs-label">The Challenge</div>
+ <h3 class="cs-title">Overcoming Rejections for a Paid Position</h3>
+ <div class="cs-text">An undergraduate economics student at UC Irvine struggled with months of ignored emails and rejected applications for on-campus research roles.</div>
+ 
+ <div class="cs-label">The Strategy</div>
+ <div class="cs-text">I completely overhauled their resume to highlight specific data analysis coursework and crafted a highly customized outreach strategy demonstrating how they could immediately contribute to a professor's upcoming grant proposal.</div>
+ </div>
+ <div class="cs-highlight">
+ <div class="cs-image" style="background-color: #eef4fb; display: flex; align-items: center; justify-content: center;">
+ <svg viewBox="0 0 24 24" fill="none" stroke="#2b425b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 50%; height: 50%;">
+ <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+ <circle cx="12" cy="7" r="4"></circle>
+ </svg>
+ </div>
+ <div class="cs-title" style="color: #2b425b; font-size: 48px; margin-bottom: 10px;">UC Irvine</div>
+ <div class="cs-label" style="color: #2b425b;">Paid Research Position</div>
+ <p style="margin-top: 10px; color: #5a6d7a; font-style: italic; font-size: 18px; line-height: 1.6;">"I truly wouldn't have been able to achieve any of this without Ishaani's help. Her guidance is incredibly clear and well thought-out. The resources she provides are amazing, and she was always willing to work closely with me. What I loved most was how incredibly specific and tailored her advice wasnothing felt generic. She is super kind, exceptionally understanding, and ultimately helped me land a position I never thought possible!"</p>
+ </div>
+ </div>
+
+ </div>
+
+
+
+ <div class="testimonial-carousel">
+ <div class="carousel-track-container">
+ <div class="carousel-track">
+ <div class="carousel-slide current-slide">
+ <div class="quote-card" style="margin: 0;">
+ <p class="testimonial-text" style="font-size: 20px; line-height: 1.7;">"I sent out almost 50 emails to professors on my own and got zero replies. I honestly thought my stats just weren't good enough for a top lab. The outreach framework completely changed my approach. Instead of sending generic cover letters, we spent time actually reading recent papers and pitching specific ways I could help with data cleaning and literature reviews. Within two weeks of using the new strategy, I secured an interview at UPenn. The process suddenly made sense."</p>
+ <div class="testimonial-author" style="font-size: 16px;"> High School Junior, STEM Placement</div>
+ </div>
+ </div>
+ <div class="carousel-slide">
+ <div class="quote-card" style="margin: 0;">
+ <p class="testimonial-text" style="font-size: 20px; line-height: 1.7;">"As a high schooler with no formal lab experience, I felt totally out of my depth when I actually landed an interview at a lab. The mock interview sessions were a lifesaver. You helped me stop apologizing for what I didn't know and instead taught me how to highlight my ability to learn fast and contribute to their current project stack. The Principal Investigator actually complimented my technical confidence during the real interview."</p>
+ <div class="testimonial-author" style="font-size: 16px;"> 11th Grade Student, Computer Science</div>
+ </div>
+ </div>
+ <div class="carousel-slide">
+ <div class="quote-card" style="margin: 0;">
+ <p class="testimonial-text" style="font-size: 20px; line-height: 1.7;">"I knew I wanted to do applied machine learning research, but I didn't know how to translate my personal coding projects into a resume that a PhD student or professor would care about. The intensive audit helped me completely reframe my GitHub portfolio, strip away the fluff, and target labs that were looking for my exact skill set. The two-week sprint was intense, but it directly led to an offer."</p>
+ <div class="testimonial-author" style="font-size: 16px;"> 12th Grade Student, AI/ML Placement</div>
+ </div>
+ </div>
+ <div class="carousel-slide">
+ <div class="quote-card" style="margin: 0;">
+ <p class="testimonial-text" style="font-size: 20px; line-height: 1.7;">"Cold-emailing RF professors felt impossible because every lab seemed so specialized. The outreach framework helped me narrow down labs specifically working on microstrip antenna design and satellite communications that actually had open grant funding for undergrads. Instead of sending a standard resume, we pitched a specific proposal on how I could assist with their CST simulation workload. I received two interview invites in my first week of outreach and secured an offer."</p>
+ <div class="testimonial-author" style="font-size: 16px;"> College Senior, Electrical & Computer Engineering</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="carousel-nav">
+ <button class="carousel-indicator current-indicator"></button>
+ <button class="carousel-indicator"></button>
+ <button class="carousel-indicator"></button>
+ <button class="carousel-indicator"></button>
+ </div>
+ </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- EXPERTS -->
+<section class="experts" id="experts">
+ <div class="container">
+ <div class="experts-container">
+ <div class="expert-img"></div>
+ <div class="expert-card">
+ <h3>Ishaani Jain</h3>
+ <div class="expert-creds">Founder & Lead Strategist</div>
+ <p>Hi, I'm Ishaani! I'm currently a Computer Science student at UC Irvine, and I absolutely love exploring the world of AI. Right now, I'm conducting research at MIT's CSAIL lab focusing on high computational programming, as well as Carnegie Mellon's Human Sensing Lab, where I get to work on AI and robotics.</p>
+ <p style="margin-top: 20px;">Over the years, I've had the amazing opportunity to dive deep into my passionsworking on AI safety at SPAR, government-funded healthcare AI at Oregon State, and partnered research at UCI's Calit2 labs. After navigating the competitive academic landscape and receiving offers to research at places like Princeton, UC Berkeley, Johns Hopkins, and other UCs, friends and so many other people started reaching out to me for help. I realized I wanted to share everything I learned, but I couldn't keep up with all the requests! That's exactly why I created Axiom. In just a couple of months, I've been able to help so many ambitious students build their own dream profiles, and I would be absolutely thrilled to help you do the same.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section class="framework" id="framework">
+ <div class="container">
+ <h2 class="section-title" style="font-size: 80px; font-weight: 800; text-align: center; margin-bottom: 70px; color: #2b425b; font-family: 'Cormorant Garamond', serif; letter-spacing: -1px; text-shadow: 2px 2px 0px #ffffff;">My Proven Methodology</h2>
+ <div class="framework-grid stacked">
+ <div class="step-card">
+ <div class="step-num">01</div>
+ <h3>Personalize Your Roadmap</h3>
+ <p>We begin with a deep audit of your current profile, identifying exact weaknesses and mapping out a strict timeline for success.</p>
+ </div>
+ <div class="step-card">
+ <div class="step-num">02</div>
+ <h3>Profile Building</h3>
+ <p>We craft a highly differentiated 'theme', engineering your resume and online presence to look irresistible to elite university professors.</p>
+ </div>
+ <div class="step-card">
+ <div class="step-num">03</div>
+ <h3>Outreach Strategy</h3>
+ <p>We deploy our proprietary 'Candid' framework to build a target list of labs and write the exact cold emails that get responses.</p>
+ </div>
+ <div class="step-card">
+ <div class="step-num">04</div>
+ <h3>Interview Guidance</h3>
+ <p>Once you get the reply, we run rigorous mock interviews to ensure you demonstrate the exact competency top labs demand.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+ <div class="container" style="position: relative; z-index: 2;">
+ <h2 class="section-title" style="font-size: 80px; font-weight: 800; text-align: center; margin-bottom: 70px; color: #2b425b; font-family: 'Cormorant Garamond', serif; letter-spacing: -1px;">Three Pathways to Placement</h2>
+ <div class="services-grid">
+ 
+ <!-- Tier 1 -->
+ <div class="service-card">
+ <h3 style="margin-bottom: 24px; font-size: 28px;">Intensive Audit</h3>
+ <div class="pricing-price">$70</div>
+ <div class="pricing-duration">50 Minutes</div>
+ <div class="pricing-vibe">A quick, high-impact session for immediate feedback and strategy.</div>
+ <ul class="pricing-list">
+ <li>Full profile and resume review</li>
+ <li>1-on-1 strategy session</li>
+ <li>Prioritized list of actionable improvements</li>
+ </ul>
+ <a href="javascript:void(0)" onclick="openCheckout('intensive')" class="btn-primary" style="width: 100%; border-radius: 8px; text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Sign Up Now</a>
+ </div>
+
+ <!-- Tier 2 (Highlighted) -->
+ <div class="service-card popular">
+ <div class="popular-badge">Most Popular</div>
+ <h3 style="margin-bottom: 24px; font-size: 28px;">Speed Launch</h3>
+ <div class="pricing-price" style="display: flex; align-items: baseline; justify-content: center; gap: 10px;">
+    <span style="font-size: 24px; text-decoration: line-through; color: #a0aec0; font-weight: 500;">$265</span>
+    <span>$238.50</span>
+  </div>
+  <div style="font-size: 11px; font-weight: 700; color: #10b981; margin-top: -6px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.5px;">10% Discount Applied</div>
+ <div class="pricing-duration">2 Weeks</div>
+ <div class="pricing-vibe">A powerful 14-day engagement focused purely on positioning the client perfectly.</div>
+ <ul class="pricing-list">
+ <li><strong>Week 1:</strong> Full Profile Audit, LinkedIn/Resume Overhaul, & Strengths Building</li>
+ <li><strong>Week 2:</strong> Outreach, Lab Targeting, & Full Cold Email Guide</li>
+ <li>All research done by me with 1-on-1 guidance</li>
+ <li>2 × 1-on-1 meetings & Extended 24-hour support</li>
+ </ul>
+ <a href="javascript:void(0)" onclick="openCheckout('speed')" class="btn-primary" style="width: 100%; border-radius: 8px; text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Sign Up Now</a>
+ </div>
+
+ <!-- Tier 3 -->
+ <div class="service-card">
+ <h3 style="margin-bottom: 24px; font-size: 28px;">Full Mentorship</h3>
+ <div class="pricing-price">$420</div>
+ <div class="pricing-duration">4 Weeks</div>
+ <div class="pricing-vibe">My most comprehensive, hands-on program guiding clients through the entire placement process from start to finish.</div>
+ <ul class="pricing-list">
+ <li><strong>Everything in Speed Launch</strong></li>
+ <li><strong>Weeks 3 & 4:</strong> Intensive Interview Prep & Future Strategy</li>
+ <li>2 extra mock interviews & advanced guides</li>
+ <li>Extended 24-hour support & 4 total meetings</li>
+ </ul>
+ <a href="javascript:void(0)" onclick="openCheckout('mentorship')" class="btn-primary" style="width: 100%; border-radius: 8px; text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Sign Up Now</a>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+
+
+
+<!-- STATS -->
+<!-- PLACEMENTS TABLE -->
+
+
+<!-- SOCIAL PROOF -->
+
+<!-- CTA -->
+<section class="cta">
+ <div class="container">
+ <h2>Book a Complimentary Discovery Call</h2>
+ <p>I am ready to help you unlock your research potential</p>
+ <a href="javascript:void(0)" onclick="document.getElementById('seminarModal').style.display='flex'" class="btn-cta" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Get Started</a>
+ </div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2>Get in Touch with me</h2>
+        <p>Send me a message or ask a question!</p>
+        
+        <div class="contact-info-block">
+          <strong>Email:</strong>
+          <span>ishaani.jain1@gmail.com</span>
+        </div>
+      </div>
+      
+      <div class="contact-right">
+        <div class="contact-card">
+          <form action="https://formspree.io/f/xaqvaqpj" method="POST">
+                        <div class="form-group">
+              <label>Full Name:<span style="color: #e53e3e;">*</span></label>
+              <input type="text" name="name" placeholder="John Smith" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Email Address:<span style="color: #e53e3e;">*</span></label>
+              <input type="email" name="email" placeholder="john.smith@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Type Message Here...</label>
+              <textarea name="message" placeholder="Type your message here..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>AXIOM</h4>
+ <p>Elite research placement consulting engineered by researchers from MIT, CMU, Stanford, and UC Berkeley.</p>
+ </div>
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="#services">Profile Audit</a></li>
+ <li><a href="#services">2-Week Sprint</a></li>
+ <li><a href="#services">4-Week Launch</a></li>
+ <li><a href="#services">Full Mentorship</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Company</h4>
+ <ul>
+ <li><a href="#">About Me</a></li>
+ <li><a href="#impact">Impact Stories</a></li>
+ <li><a href="#">Careers</a></li>
+ <li><a href="#">Blog</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Contact</h4>
+ <a href="mailto:ishaani.jain1@gmail.com" style="color: rgba(255,255,255,0.55); text-decoration: none;">Get in Touch</a>
+ </div>
+ </div>
+
+ <div class="footer-bottom">
+ <p>© 2026 AXIOM Consulting Group. All rights reserved.</p>
+ <div class="social-links">
+ <a href="#">F</a>
+ <a href="#">T</a>
+ <a href="#">In</a>
+ </div>
+ </div>
+ </div>
+</footer>
+
+<script>
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function (e) {
+ e.preventDefault();
+ const target = document.querySelector(this.getAttribute('href'));
+ if (target) target.scrollIntoView({ behavior: 'smooth' });
+ });
+ });
+</script>
+
+
+ <script>
+ document.addEventListener("DOMContentLoaded", function() {
+ const frameworkGrid = document.querySelector('.framework-grid');
+ if (frameworkGrid) {
+ frameworkGrid.classList.add('stacked'); // Set initial state
+ 
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ frameworkGrid.classList.remove('stacked');
+ observer.unobserve(frameworkGrid);
+ }
+ });
+ }, { threshold: 0.2 });
+ 
+ observer.observe(frameworkGrid);
+ }
+ });
+ </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+ const track = document.querySelector('.carousel-track');
+ if (!track) return;
+ const slides = Array.from(track.children);
+ const dotsNav = document.querySelector('.carousel-nav');
+ const dots = Array.from(dotsNav.children);
+
+ let currentIndex = 0;
+ 
+ const moveToSlide = (index) => {
+ track.style.transform = 'translateX(-' + index * 100 + '%)';
+ dots[currentIndex].classList.remove('current-indicator');
+ dots[index].classList.add('current-indicator');
+ currentIndex = index;
+ };
+
+ dots.forEach((dot, index) => {
+ dot.addEventListener('click', () => {
+ moveToSlide(index);
+ });
+ });
+
+ setInterval(() => {
+ let nextIndex = currentIndex + 1;
+ if (nextIndex >= slides.length) nextIndex = 0;
+ moveToSlide(nextIndex);
+ }, 4000);
+});
+</script>
+
+<script>
+(function() {
+ const slides = document.querySelectorAll('.hero-slide');
+ const dots = document.querySelectorAll('.hero-dot');
+ let current = 0;
+ let timer;
+
+ function goTo(idx) {
+ slides[current].classList.remove('active');
+ dots[current].classList.remove('active');
+ current = (idx + slides.length) % slides.length;
+ slides[current].classList.add('active');
+ dots[current].classList.add('active');
+ }
+
+ function startTimer() {
+ clearInterval(timer);
+ timer = setInterval(() => goTo(current + 1), 5000);
+ }
+
+ document.getElementById('heroNext').addEventListener('click', () => { goTo(current + 1); startTimer(); });
+ document.getElementById('heroPrev').addEventListener('click', () => { goTo(current - 1); startTimer(); });
+ dots.forEach(dot => dot.addEventListener('click', () => { goTo(+dot.dataset.slide); startTimer(); }));
+ startTimer();
+})();
+</script>
+
+
+
+
+<!-- SEMINAR MODAL -->
+<div class="modal-overlay" id="seminarModal" style="position: fixed; inset: 0; background: #f8fafc; z-index: 9999; display: none; align-items: center; justify-content: center; flex-direction: column; overflow-y: auto;">
+  
+  <div style="position: absolute; top: 40px; right: 40px; cursor: pointer; padding: 10px 20px; background: white; border-radius: 50px; font-weight: 600; color: #4a5a6a; box-shadow: 0 4px 12px rgba(0,0,0,0.05);" onclick="document.getElementById('seminarModal').style.display='none'">
+    ✕ Cancel
+  </div>
+
+  <div style="text-align: center; max-width: 900px; padding: 40px 20px; width: 100%; margin-top: 40px;">
+    <div style="font-size: 56px; margin-bottom: 20px;">📅</div>
+    <h2 style="font-size: 48px; font-weight: 800; color: #1e3a5f; margin-bottom: 20px; font-family: 'Inter', system-ui, sans-serif; letter-spacing: -1px; line-height: 1.1;">Choose Your Session</h2>
+    <p style="font-size: 22px; color: #4a5a6a; margin-bottom: 60px; font-family: 'Inter', system-ui, sans-serif;">Select the date that works best for you to register for the free info session.</p>
+    
+    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
+      
+      <!-- Option 1 -->
+      <a href="https://luma.com/2yh0tkzf" target="_blank" style="display: flex; flex-direction: column; align-items: flex-start; padding: 50px 40px; background: white; border-radius: 24px; box-shadow: 0 20px 50px rgba(10,22,40,0.06); text-decoration: none; width: 100%; max-width: 400px; border: 2px solid transparent; transition: all 0.3s ease; text-align: left;" onmouseover="this.style.borderColor='#5a8fc4'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(90,143,196,0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.transform='none'; this.style.boxShadow='0 20px 50px rgba(10,22,40,0.06)';" onclick="document.getElementById('seminarModal').style.display='none'">
+        <span style="font-size: 14px; font-weight: 700; color: #5a8fc4; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; font-family: 'Inter', system-ui, sans-serif;">Seminar Option 1</span>
+        <span style="font-size: 32px; font-weight: 800; color: #1e3a5f; margin-bottom: 12px; font-family: 'Inter', system-ui, sans-serif; line-height: 1.1;">Sunday,<br>August 16th</span>
+        <span style="font-size: 18px; color: #4a5a6a; margin-bottom: 40px; font-weight: 500; font-family: 'Inter', system-ui, sans-serif;">🕒 10:00 AM PDT</span>
+        <div style="margin-top: auto; padding: 16px 24px; background: #1e3a5f; color: white; border-radius: 50px; font-weight: 600; width: 100%; text-align: center; font-size: 16px; font-family: 'Inter', system-ui, sans-serif;">Register Now &rarr;</div>
+      </a>
+      
+      <!-- Option 2 -->
+      <a href="https://lu.ma/gthmlvim" target="_blank" style="display: flex; flex-direction: column; align-items: flex-start; padding: 50px 40px; background: white; border-radius: 24px; box-shadow: 0 20px 50px rgba(10,22,40,0.06); text-decoration: none; width: 100%; max-width: 400px; border: 2px solid transparent; transition: all 0.3s ease; text-align: left;" onmouseover="this.style.borderColor='#5a8fc4'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(90,143,196,0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.transform='none'; this.style.boxShadow='0 20px 50px rgba(10,22,40,0.06)';" onclick="document.getElementById('seminarModal').style.display='none'">
+        <span style="font-size: 14px; font-weight: 700; color: #5a8fc4; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; font-family: 'Inter', system-ui, sans-serif;">Seminar Option 2</span>
+        <span style="font-size: 32px; font-weight: 800; color: #1e3a5f; margin-bottom: 12px; font-family: 'Inter', system-ui, sans-serif; line-height: 1.1;">Tuesday,<br>August 18th</span>
+        <span style="font-size: 18px; color: #4a5a6a; margin-bottom: 40px; font-weight: 500; font-family: 'Inter', system-ui, sans-serif;">🕒 8:00 PM PDT</span>
+        <div style="margin-top: auto; padding: 16px 24px; background: #1e3a5f; color: white; border-radius: 50px; font-weight: 600; width: 100%; text-align: center; font-size: 16px; font-family: 'Inter', system-ui, sans-serif;">Register Now &rarr;</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- PROMO PAGE LOAD MODAL -->
+<div class="modal-overlay" id="promoModal" style="position: fixed; inset: 0; background: rgba(10,22,40,0.6); backdrop-filter: blur(4px); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px;">
+  <div class="modal-card" style="background: #ffffff; width: 100%; max-width: 650px; border-radius: 16px; padding: 60px 40px; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.2); text-align: center;">
+    <button style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 28px; color: #a0aec0; cursor: pointer;" onclick="document.getElementById('promoModal').style.display='none'">&times;</button>
+    <h3 style="font-size: 38px; line-height: 1.2; margin-bottom: 20px; color: #1e3a5f; font-family: 'Cormorant Garamond', serif;">Sign up for a <span style="color: #fbbf24; background: #1e3a5f; padding: 0 10px; border-radius: 8px;">FREE</span> seminar with Ishaani Jain to learn more</h3>
+    <p style="font-size: 20px; margin-bottom: 40px; color: #4a5a6a;">Please choose which group seminar you would like to register for.</p>
+    
+    <a href="https://luma.com/2yh0tkzf" target="_blank" style="display:flex; flex-direction:column; align-items:center; padding: 24px; background: #2b425b; color: #fbbf24; border: 2px solid #2b425b; margin-bottom: 20px; text-decoration: none;" onclick="document.getElementById('promoModal').style.display='none'" onmouseover="this.style.background='#1e3a5f';" onmouseout="this.style.background='#2b425b';">
+      <span style="font-size: 22px; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Seminar Option 1</span>
+      <span style="font-size: 16px; font-weight: 600; text-transform: none; opacity: 0.95; color: #fef3c7;">Sunday, August 16th @ 10:00 AM PDT</span>
+    </a>
+    
+    <a href="https://lu.ma/gthmlvim" target="_blank" style="display:flex; flex-direction:column; align-items:center; padding: 24px; background: #2b425b; color: #fbbf24; border: 2px solid #fbbf24; text-decoration: none;" onclick="document.getElementById('promoModal').style.display='none'" onmouseover="this.style.background='#1e3a5f';" onmouseout="this.style.background='#2b425b';">
+      <span style="font-size: 22px; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Seminar Option 2</span>
+      <span style="font-size: 16px; font-weight: 600; text-transform: none; color: #fef3c7;">Tuesday, August 18th @ 8:00 PM - 9:00 PM PDT</span>
+    </a>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('promoModal').style.display = 'flex';
+    }, 1500);
+  });
+</script>
+
+
+<!-- CHECKOUT MODAL -->
+<div class="checkout-overlay" id="checkoutModal">
+  <div class="checkout-card">
+    <button class="checkout-close" onclick="closeCheckout()">&times;</button>
+    
+    <div class="checkout-body">
+      
+      <!-- Steps Indicator -->
+      <div class="checkout-steps">
+        <div class="checkout-step-progress" id="checkoutProgress"></div>
+        <div class="checkout-step active" id="stepIndicator-1">1</div>
+        <div class="checkout-step" id="stepIndicator-2">2</div>
+        <div class="checkout-step" id="stepIndicator-3">✓</div>
+      </div>
+      
+      <form id="checkoutForm" novalidate>
+        <!-- Hidden configuration fields for Formspree -->
+        <input type="hidden" name="_subject" id="formspreeSubject" value="New Axiom Package Enrollment">
+        <input type="hidden" name="selected_package" id="hiddenSelectedPackage" value="">
+        <input type="hidden" name="package_price" id="hiddenPackagePrice" value="">
+        <input type="hidden" name="payment_method" id="hiddenPaymentMethod" value="">
+        
+        <!-- STEP 1: INFORMATION -->
+        <div class="checkout-form-step active" id="checkoutStep-1">
+          <h3 class="checkout-title">Select Pathway & Info</h3>
+          <p class="checkout-subtitle">Fill in student details and choose your program pathway.</p>
+          
+          <div class="checkout-label">Select Package</div>
+          <div class="package-cards">
+            <!-- Package 1 -->
+            <label class="package-card-option" id="pkg-intensive">
+              <input type="radio" name="package_selection" value="intensive" onclick="selectPackage('intensive', 70)">
+              <div class="package-card-name">Intensive Audit</div>
+              <div class="package-card-price">$70</div>
+              <div class="package-card-desc">50 Minutes • 1-on-1 strategy & profile review</div>
+            </label>
+            <!-- Package 2 -->
+            <label class="package-card-option" id="pkg-speed">
+              <input type="radio" name="package_selection" value="speed" onclick="selectPackage('speed', 238.5)">
+              <div class="package-card-name">Speed Launch</div>
+              <div class="package-card-price" style="display: flex; align-items: baseline; gap: 8px;">
+                <span style="font-size: 14px; text-decoration: line-through; color: #a0aec0; font-weight: 500;">$265</span>
+                <span>$238.50</span>
+              </div>
+              <div class="package-card-desc">2 Weeks • Full audit & lab targeting sprint</div>
+            </label>
+            <!-- Package 3 -->
+            <label class="package-card-option" id="pkg-mentorship">
+              <input type="radio" name="package_selection" value="mentorship" onclick="selectPackage('mentorship', 420)">
+              <div class="package-card-name">Full Mentorship</div>
+              <div class="package-card-price">$420</div>
+              <div class="package-card-desc">4 Weeks • Comprehensive end-to-end placement</div>
+            </label>
+          </div>
+          
+          <div class="checkout-form-group">
+            <label class="checkout-label" for="clientName">Full Name</label>
+            <input type="text" id="clientName" name="name" class="checkout-input" placeholder="Enter student or parent name" required>
+          </div>
+          
+          <div class="checkout-row">
+            <div class="checkout-col-6 checkout-form-group">
+              <label class="checkout-label" for="clientEmail">Email Address</label>
+              <input type="email" id="clientEmail" name="email" class="checkout-input" placeholder="name@domain.com" required>
+            </div>
+            <div class="checkout-col-6 checkout-form-group">
+              <label class="checkout-label" for="clientPhone">Phone Number</label>
+              <input type="tel" id="clientPhone" name="phone" class="checkout-input" placeholder="(123) 456-7890" required>
+            </div>
+          </div>
+          
+          <div class="checkout-form-group">
+            <label class="checkout-label" for="clientLevel">Academic Level</label>
+            <select id="clientLevel" name="academic_level" class="checkout-select" required>
+              <option value="" disabled selected>Select student stage</option>
+              <option value="Middle School">Middle School</option>
+              <option value="High School Freshman/Sophomore">High School Freshman / Sophomore</option>
+              <option value="High School Junior">High School Junior</option>
+              <option value="High School Senior">High School Senior</option>
+              <option value="College Student">College Student</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="checkout-actions">
+            <div></div> <!-- Spacer -->
+            <button type="button" class="btn-checkout-next" style="width: 180px;" onclick="goToStep(2)">Next Step &rarr;</button>
+          </div>
+        </div>
+        
+        <!-- STEP 2: PAYMENT -->
+        <div class="checkout-form-step" id="checkoutStep-2">
+          <h3 class="checkout-title">Complete Enrollment</h3>
+          <p class="checkout-subtitle">Send your fee via Zelle to complete your enrollment.</p>
+          
+          <div id="zelleContainer">
+            <!-- Order Summary -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: #4a5a6a;">
+                <span>Selected Pathway:</span>
+                <strong id="summaryPkgName" style="color: #2b425b;">Intensive Audit</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 700; color: #2b425b;">
+                <span>Total Amount:</span>
+                <strong id="summaryPkgPrice" style="color: #1e3a5f;">$70</strong>
+              </div>
+            </div>
+
+            <!-- Zelle Instructions -->
+            <div class="zelle-instructions" style="margin-bottom: 20px; padding: 20px;">
+              <h4 style="font-size: 15px; font-weight: 700; color: #1e3a5f; margin-bottom: 10px;">Zelle Payment Instructions</h4>
+              <p style="font-size: 13.5px; color: #4a5a6a; margin-bottom: 14px; line-height: 1.4;">
+                Please send the fee directly using Zelle from your banking app. Once completed, submit your sender details below.
+              </p>
+              
+              <div class="zelle-destination-box" style="margin-top: 10px; margin-bottom: 15px;">
+                <div>
+                  <div class="zelle-destination-label" style="font-size: 11px;">Zelle Phone Number</div>
+                  <div class="zelle-destination-value" id="zellePhoneNumber" style="font-size: 16px;">206-670-8655</div>
+                </div>
+                <button type="button" class="zelle-copy-btn" onclick="copyZelleNumber()" style="padding: 4px 10px; font-size: 11px;">Copy Number</button>
+              </div>
+              
+              <p style="font-size: 12px; color: #64748b; font-style: italic; line-height: 1.4;">
+                💡 Note: Please write the student's name in the memo block of the Zelle transaction.
+              </p>
+            </div>
+            
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="zelleSenderName">Zelle Account Holder Name</label>
+              <input type="text" id="zelleSenderName" name="zelle_sender_name" class="checkout-input" placeholder="Name on the bank account used to send funds" required>
+            </div>
+            
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="zelleSenderContact">Your Zelle Email/Phone (Optional)</label>
+              <input type="text" id="zelleSenderContact" name="zelle_sender_contact" class="checkout-input" placeholder="For payment matching verification">
+            </div>
+          </div>
+          
+          <div class="checkout-actions">
+            <button type="button" class="btn-checkout-prev" onclick="goToStep(1)">&larr; Back</button>
+            <button type="submit" class="btn-checkout-submit" id="btnSubmitCheckout">
+              <span class="checkout-spinner" id="checkoutSpinner"></span>
+              <span id="submitBtnText">Submit Zelle Info</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- STEP 3: CONFIRMATION / SUCCESS -->
+        <div class="checkout-form-step" id="checkoutStep-3">
+          <div class="checkout-success-view">
+            <div class="checkout-success-icon">✓</div>
+            <h3 class="checkout-success-title">Enrollment Submitted!</h3>
+            <p style="font-size: 16px; color: #475569; max-width: 500px; margin: 0 auto 30px; line-height: 1.6;">
+              Thank you, <strong id="successClientName">Student</strong>. Your enrollment registration for the <strong id="successPackageName">Pathway</strong> has been received successfully!
+            </p>
+            
+            <div id="zelleSuccessMessage" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; text-align: left; max-width: 550px; margin: 0 auto 30px; font-size: 14px; color: #166534; line-height: 1.6;">
+              <strong style="display: block; font-size: 15px; margin-bottom: 8px;">⏳ Awaiting Zelle Verification</strong>
+              We have noted that you paid via Zelle under bank account name <strong id="successZelleSender">Sender Name</strong>. Once we verify the deposit of <strong id="successZellePrice">$00</strong> to 206-670-8655, your pathway scheduling link and dashboard setup instructions will be sent to your email.
+            </div>
+            
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 24px;">
+              If you have any urgent questions, please feel free to email <a href="mailto:ishaani.jain1@gmail.com" style="color: #2b425b; font-weight: 600; text-decoration: none;">ishaani.jain1@gmail.com</a>.
+            </p>
+            
+            <button type="button" class="btn-checkout-prev" style="float: none; display: inline-block;" onclick="closeCheckout()">Close Window</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Package definitions
+  const packages = {
+    intensive: { name: "Intensive Audit", price: 70, formattedPrice: "$70" },
+    speed: { name: "Speed Launch", price: 238.5, formattedPrice: "$238.50" },
+    mentorship: { name: "Full Mentorship", price: 420, formattedPrice: "$420" }
+  };
+  
+  let currentStep = 1;
+  let activePackage = 'intensive';
+  
+  function openCheckout(packageKey) {
+    // Select the package radio button and trigger selectPackage
+    const radio = document.querySelector(`.package-card-option input[value="${packageKey}"]`);
+    if (radio) {
+      radio.checked = true;
+      selectPackage(packageKey, packages[packageKey].price);
+    }
+    
+    // Reset form steps
+    goToStep(1);
+    
+    // Clear validation styling
+    document.querySelectorAll('.checkout-input, .checkout-select').forEach(el => {
+      el.style.borderColor = '';
+    });
+    
+    // Reset loader spinner
+    document.getElementById('checkoutSpinner').style.display = 'none';
+    document.getElementById('btnSubmitCheckout').disabled = false;
+    
+    // Show modal overlay
+    document.getElementById('checkoutModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Disable page scrolling
+  }
+  
+  function closeCheckout() {
+    document.getElementById('checkoutModal').style.display = 'none';
+    document.body.style.overflow = ''; // Enable page scrolling
+  }
+  
+  function selectPackage(key, price) {
+    activePackage = key;
+    
+    // Remove selected class from all options, add to selected one
+    document.querySelectorAll('.package-card-option').forEach(el => {
+      el.classList.remove('selected');
+    });
+    document.getElementById('pkg-' + key).classList.add('selected');
+    
+    // Update labels and values
+    const selectedPkg = packages[key];
+    document.getElementById('hiddenSelectedPackage').value = selectedPkg.name + ' (' + selectedPkg.formattedPrice + ')';
+    document.getElementById('hiddenPackagePrice').value = selectedPkg.formattedPrice;
+    document.getElementById('formspreeSubject').value = `New Axiom Package Enrollment - ${selectedPkg.name}`;
+    document.getElementById('hiddenPaymentMethod').value = 'Zelle Transfer';
+    
+    // Update Order Summary inside Step 2
+    document.getElementById('summaryPkgName').textContent = selectedPkg.name;
+    document.getElementById('summaryPkgPrice').textContent = selectedPkg.formattedPrice;
+    
+    // Update button price text on Step 2
+    updateSubmitButtonText();
+  }
+  
+  function updateSubmitButtonText() {
+    const textSpan = document.getElementById('submitBtnText');
+    const priceText = packages[activePackage].formattedPrice;
+    textSpan.textContent = `Submit Zelle Info (${priceText})`;
+  }
+  
+  function goToStep(step) {
+    // Basic form validation for Step 1 before proceeding to Step 2
+    if (step === 2 && currentStep === 1) {
+      if (!validateStep1()) {
+        return;
+      }
+    }
+    
+    currentStep = step;
+    
+    // Update step visibility
+    document.querySelectorAll('.checkout-form-step').forEach((el, index) => {
+      if (index + 1 === step) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+    
+    // Update step indicators
+    const progress = document.getElementById('checkoutProgress');
+    if (step === 1) {
+      progress.style.width = '0%';
+      document.getElementById('stepIndicator-1').className = 'checkout-step active';
+      document.getElementById('stepIndicator-2').className = 'checkout-step';
+      document.getElementById('stepIndicator-3').className = 'checkout-step';
+    } else if (step === 2) {
+      progress.style.width = '50%';
+      document.getElementById('stepIndicator-1').className = 'checkout-step completed';
+      document.getElementById('stepIndicator-2').className = 'checkout-step active';
+      document.getElementById('stepIndicator-3').className = 'checkout-step';
+    } else if (step === 3) {
+      progress.style.width = '100%';
+      document.getElementById('stepIndicator-1').className = 'checkout-step completed';
+      document.getElementById('stepIndicator-2').className = 'checkout-step completed';
+      document.getElementById('stepIndicator-3').className = 'checkout-step active completed';
+    }
+  }
+  
+  function validateStep1() {
+    const fields = [
+      { id: 'clientName', name: 'Name' },
+      { id: 'clientEmail', name: 'Email' },
+      { id: 'clientPhone', name: 'Phone' },
+      { id: 'clientLevel', name: 'Academic Level' }
+    ];
+    
+    let isValid = true;
+    
+    fields.forEach(field => {
+      const el = document.getElementById(field.id);
+      if (!el.value || el.value.trim() === '') {
+        el.style.borderColor = '#ef4444'; // Red error border
+        isValid = false;
+      } else {
+        el.style.borderColor = '#cbd5e1'; // Reset border
+      }
+      
+      // Email syntax validation
+      if (field.id === 'clientEmail' && el.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(el.value)) {
+          el.style.borderColor = '#ef4444';
+          isValid = false;
+        }
+      }
+    });
+    
+    return isValid;
+  }
+  
+  // Zelle validation
+  function validateStep2() {
+    const zelleName = document.getElementById('zelleSenderName');
+    if (!zelleName.value || zelleName.value.trim() === '') {
+      zelleName.style.borderColor = '#ef4444';
+      return false;
+    } else {
+      zelleName.style.borderColor = '#cbd5e1';
+      return true;
+    }
+  }
+  
+  function copyZelleNumber() {
+    const phone = document.getElementById('zellePhoneNumber').textContent;
+    navigator.clipboard.writeText(phone).then(() => {
+      const btn = document.querySelector('.zelle-copy-btn');
+      btn.textContent = 'Copied!';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.textContent = 'Copy Number';
+        btn.style.background = '#2b425b';
+      }, 2000);
+    });
+  }
+  
+  // Handle form submit
+  document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (!validateStep2()) {
+      return;
+    }
+    
+    // Show spinner and disable button
+    const submitBtn = document.getElementById('btnSubmitCheckout');
+    const spinner = document.getElementById('checkoutSpinner');
+    submitBtn.disabled = true;
+    spinner.style.display = 'inline-block';
+    
+    // Prepare form data
+    const formData = new FormData(this);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    
+    // Submit via Formspree AJAX
+    fetch('https://formspree.io/f/xaqvaqpj', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Prepare success view variables
+        const clientName = document.getElementById('clientName').value;
+        const selectedPkgName = packages[activePackage].name;
+        
+        document.getElementById('successClientName').textContent = clientName;
+        document.getElementById('successPackageName').textContent = selectedPkgName;
+        
+        document.getElementById('successZelleSender').textContent = document.getElementById('zelleSenderName').value;
+        document.getElementById('successZellePrice').textContent = packages[activePackage].formattedPrice;
+        
+        // Advance to step 3 (Success step)
+        goToStep(3);
+        
+        // Reset form
+        document.getElementById('checkoutForm').reset();
+      } else {
+        // Fallback: submit standard way if AJAX fails
+        submitFormStandard();
+      }
+    })
+    .catch(error => {
+      // Fallback: submit standard way if network error
+      submitFormStandard();
+    });
+  });
+
+  function submitFormStandard() {
+    const form = document.getElementById('checkoutForm');
+    form.action = 'https://formspree.io/f/xaqvaqpj';
+    form.method = 'POST';
+    // Dynamically add payment method details so they are captured by Formspree
+    const paymentInput = document.createElement('input');
+    paymentInput.type = 'hidden';
+    paymentInput.name = 'payment_method';
+    paymentInput.value = 'Zelle Transfer';
+    form.appendChild(paymentInput);
+    
+    // Submit standard HTML form
+    form.submit();
+  }
+</script>
+
+</body>
+
+
+
+</html>
