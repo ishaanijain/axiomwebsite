@@ -3354,16 +3354,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <label class="package-card-option" id="pkg-intensive">
               <input type="radio" name="package_selection" value="intensive" onclick="selectPackage('intensive', 70)">
               <div class="package-card-name">Intensive Audit</div>
-              <div class="package-card-price">$70</div>
+              <div class="package-card-price">$97</div>
               <div class="package-card-desc">50 Minutes • 1-on-1 strategy & profile review</div>
             </label>
             <!-- Package 2 -->
             <label class="package-card-option" id="pkg-speed">
-              <input type="radio" name="package_selection" value="speed" onclick="selectPackage('speed', 238.5)">
+              <input type="radio" name="package_selection" value="speed" onclick="selectPackage('speed', 447)">
               <div class="package-card-name">Speed Launch</div>
               <div class="package-card-price" style="display: flex; align-items: baseline; gap: 8px;">
-                <span style="font-size: 14px; text-decoration: line-through; color: #a0aec0; font-weight: 500;">$265</span>
-                <span>$238.50</span>
+                <span style="font-size: 14px; text-decoration: line-through; color: #a0aec0; font-weight: 500;">$447</span>
+                <span>$447</span>
               </div>
               <div class="package-card-desc">2 Weeks • Full audit & lab targeting sprint</div>
             </label>
@@ -3371,7 +3371,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <label class="package-card-option" id="pkg-mentorship">
               <input type="radio" name="package_selection" value="mentorship" onclick="selectPackage('mentorship', 420)">
               <div class="package-card-name">Full Mentorship</div>
-              <div class="package-card-price">$420</div>
+              <div class="package-card-price">$847</div>
               <div class="package-card-desc">4 Weeks • Comprehensive end-to-end placement</div>
             </label>
           </div>
@@ -3425,7 +3425,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
               <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 700; color: #2b425b;">
                 <span>Total Amount:</span>
-                <strong id="summaryPkgPrice" style="color: #1e3a5f;">$70</strong>
+                <strong id="summaryPkgPrice" style="color: #1e3a5f;">$97</strong>
               </div>
             </div>
 
@@ -3499,9 +3499,9 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
   // Package definitions
   const packages = {
-    intensive: { name: "Intensive Audit", price: 70, formattedPrice: "$70" },
-    speed: { name: "Speed Launch", price: 238.5, formattedPrice: "$238.50" },
-    mentorship: { name: "Full Mentorship", price: 420, formattedPrice: "$420" }
+    intensive: { name: "Intensive Audit", price: 97, formattedPrice: "$97" },
+    speed: { name: "Speed Launch", price: 447, formattedPrice: "$447" },
+    mentorship: { name: "Full Mentorship", price: 847, formattedPrice: "$847" }
   };
   
   let currentStep = 1;
