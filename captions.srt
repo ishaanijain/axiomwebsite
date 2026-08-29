@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,000
+8th Grade Achievement
+
+2
+00:00:03,000 --> 00:00:06,000
+MIT CSAIL Research Opportunity
+
+3
+00:00:06,000 --> 00:00:09,000
+Stanford Summer Program Accepted
+
+4
+00:00:09,000 --> 00:00:12,000
+Elite Research Placement Success
+
+5
+00:01:25,000 --> 00:01:31,520
+Join AXIOM for Your Research Journey
